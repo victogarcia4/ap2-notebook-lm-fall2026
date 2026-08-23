@@ -163,6 +163,12 @@ Notes:
 
 Append newest at the top. One entry per meaningful session. Keep to the shape below.
 
+### 2026-08-22 — Remove Reset Assignments; fix admin login (Claude Opus 4.7)
+- Removed the **Reset Assignments** button from `RosterMatrix.tsx` entirely. Removed associated `onRandomize` prop, `policy` state, and `handleRandomize` local handler. Removed `handleRandomize` and dead `handleResetDefault` from `App.tsx`. `DistributionPolicy` import still present in `App.tsx` (still used by `initDefaultRoster`/`runAllocation`/`handleImportRoster`).
+- Fixed `verifyAdmin` in both `SubmittedNotebooks.tsx` and `AIGameRepository.tsx`: when the POST returns **404** (Vite dev server, no serverless functions), the function now returns `true` so the admin UI unlocks locally. On Vercel the API runs normally and returns 200/401. The actual save/delete calls enforce auth via 401 regardless of env.
+- TypeScript clean (`npm run lint` zero errors). Committed and pushed as `f6a8ac2`.
+- **Next unfinished work:** CSS component migration off compatibility bridge; verify Vercel env vars (`GITHUB_TOKEN`, `ADMIN_PASSWORD`) are set for Production environment and redeploy.
+
 ### 2026-08-22 — Vercel deploy-ready (Claude Opus 4.7)
 - Rewrote [`vercel.json`](vercel.json): explicit `framework: vite`, `buildCommand`, `outputDirectory: dist`, `installCommand`, `functions."api/*.ts".maxDuration: 15`, and a single SPA-fallback rewrite. Removed the redundant identity rewrite for `/api/*` (Vercel already routes function paths before rewrites).
 - Verified the client only talks to `/api/notebooks` and `/api/games` (found in `SubmittedNotebooks.tsx` and `AIGameRepository.tsx`) — no `process.env`/`import.meta.env` leakage into the bundle, so no `VITE_*` env plumbing is needed.
