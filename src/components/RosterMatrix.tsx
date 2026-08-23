@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import { Student, DistributionPolicy, AcademicSession } from '../types';
+import { Student, AcademicSession } from '../types';
 import { hapsOutcomes } from '../data/outcomes';
-import { Search, RotateCcw, Clipboard, Download, Printer, Settings, Award } from 'lucide-react';
+import { Search, Clipboard, Download, Printer, Settings, Award } from 'lucide-react';
 
 interface RosterMatrixProps {
   students: Student[];
-  onRandomize: (policy: DistributionPolicy) => void;
   onOpenContract: (index: number) => void;
   onShowOutcomeDetails: (examKey: string, index: number) => void;
   onBulkPrint: () => void;
@@ -17,7 +16,6 @@ interface RosterMatrixProps {
 
 export default function RosterMatrix({
   students,
-  onRandomize,
   onOpenContract,
   onShowOutcomeDetails,
   onBulkPrint,
@@ -29,12 +27,6 @@ export default function RosterMatrix({
   const [search, setSearch] = useState("");
   const [levelFilter, setLevelFilter] = useState("all");
   const [gradeFilter, setGradeFilter] = useState("all");
-  const [policy, setPolicy] = useState<DistributionPolicy>("balanced");
-
-  // Local handler for randomization
-  const handleRandomize = () => {
-    onRandomize(policy);
-  };
 
   const filteredStudents = students.filter(student => {
     const query = search.toLowerCase();
@@ -64,14 +56,6 @@ export default function RosterMatrix({
         </h3>
 
         <div className="flex flex-wrap gap-3">
-          <button
-            onClick={handleRandomize}
-            className="candy-button inline-flex items-center gap-2 text-xs py-3.5 px-5 cursor-pointer uppercase font-black shrink-0"
-          >
-            <RotateCcw className="w-4 h-4 text-white stroke-[3px]" />
-            <span>Reset Assignments</span>
-          </button>
-          
           <button
             onClick={onCopyClipboard}
             className="inline-flex items-center gap-2 bg-[#FFFDF5] hover:bg-[#FBBF24] text-[#1E293B] border-2 border-[#1E293B] font-display text-xs font-black uppercase tracking-wider py-3 px-5 rounded-xl transition-all cursor-pointer pop-shadow-sm active:translate-y-[1px] shrink-0"

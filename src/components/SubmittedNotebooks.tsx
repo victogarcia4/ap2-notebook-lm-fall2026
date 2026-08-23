@@ -109,6 +109,7 @@ export default function SubmittedNotebooks() {
   }, []);
 
   const verifyAdmin = async (password: string): Promise<boolean> => {
+    if (!password) return false;
     try {
       const res = await fetch(API_BASE, {
         method: 'POST',
@@ -118,6 +119,11 @@ export default function SubmittedNotebooks() {
         },
         body: JSON.stringify({ action: 'verify' }),
       });
+      // 200 = correct password (Vercel)
+      // 401 = wrong password
+      // 404 = API not running locally (vite dev) — allow UI access;
+      //       the actual save call will enforce auth via 401 on Vercel
+      if (res.status === 404) return true;
       return res.ok;
     } catch {
       return false;

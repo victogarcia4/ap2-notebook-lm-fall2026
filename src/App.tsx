@@ -84,13 +84,6 @@ export default function App() {
     return studentList;
   };
 
-  const handleRandomize = (policy: DistributionPolicy) => {
-    const updated = runAllocation(students, policy);
-    setStudents(updated);
-    localStorage.setItem('biol2402_students', JSON.stringify(updated));
-    showToast("Successfully distributed learning outcomes deterministically (1 SLO per Exam per Student)!");
-  };
-
   const handleImportRoster = (newRoster: Student[]) => {
     const assigned = runAllocation(newRoster, 'balanced');
     setStudents(assigned);
@@ -98,13 +91,6 @@ export default function App() {
     setSelectedStudentIdx(0);
     setActiveTab('matrix');
     showToast(`Successfully imported and randomized ${newRoster.length} students!`);
-  };
-
-  const handleResetDefault = () => {
-    initDefaultRoster('balanced');
-    setSelectedStudentIdx(0);
-    setActiveTab('matrix');
-    showToast("Restored original class roster (28 enrolled).");
   };
 
   const handleSessionChange = (newSession: AcademicSession) => {
@@ -280,7 +266,6 @@ export default function App() {
               students={students}
               session={session}
               onSessionChange={handleSessionChange}
-              onRandomize={handleRandomize}
               onOpenContract={handleOpenContract}
               onShowOutcomeDetails={handleShowOutcomeDetails}
               onBulkPrint={() => window.print()}
