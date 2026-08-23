@@ -100,16 +100,40 @@ Do not delete the compatibility bridge until every component has been migrated. 
 
 ## 6. Serverless API contract
 
-Both `api/notebooks.ts` and `api/games.ts` follow the same shape:
+Both `api/notebooks.ts` and `api/games.ts` follow the same shape — action-based POST, **no** REST verbs beyond `GET`:
 
-- `GET  /api/notebooks` → `SubmittedNotebook[]` sorted by `examId` then `createdAt`.
-- `POST /api/notebooks` with `{ password, entry: SubmittedNotebook }` → append + commit.
-- `DELETE /api/notebooks` with `{ password, id }` → filter + commit.
-- `PATCH /api/notebooks` with `{ password, id, updates }` → merge + commit.
+- `GET  /api/notebooks` → returns the current array straight from GitHub (`data/notebooks.json` on `main`). No auth. On cold path or 404 returns `[]`.
+- `POST /api/notebooks` with header `x-admin-password: <ADMIN_PASSWORD>` and body:
+  - `{ "action": "verify" }` → `{ authenticated: true }` if the password matches. Used by the admin login modal.
+  - `{ "action": "save", "notebooks": SubmittedNotebook[], "commitMessage"?: string }` → sorts by `examId` then author, commits the whole array back to `data/notebooks.json`, returns `{ success, message, count }`.
+- `OPTIONS` → CORS preflight.
+- Any other verb → `405`.
 
-Same for `/api/games`. All writes commit to `data/*.json` on `main` via the Contents API with a message like `"chore(notebooks): add <id>"`. Both files hard-code `REPO_OWNER = 'victogarcia4'` and `REPO_NAME = 'ap2-notebook-lm-fall2026'` — if the repo is ever renamed, edit both.
+Same shape for `/api/games`. Every write is a **full-array replace**, not a diff — the client is responsible for sending the complete list. Commits use the message the client passes, falling back to `"📓 Update notebook repository — <local date>"`. Both files hard-code `REPO_OWNER = 'victogarcia4'` and `REPO_NAME = 'ap2-notebook-lm-fall2026'` — if the repo is ever renamed, edit both.
+
+Because writes commit to `main` of this same repo, and Vercel auto-redeploys on push, **every submission triggers a fresh Vercel deploy**. That is intentional; keep it in mind before rate-limiting or debouncing.
 
 `Student.exam1…exam5` on the roster type are optional `LearningOutcome` slots — App.tsx uses them to render the roster matrix. They are *not* persisted; they're derived per session from a distribution policy (see `AcademicSession` and `DistributionPolicy` in `src/types.ts`).
+
+## 6a. Deploy on Vercel
+
+Configuration lives in [`vercel.json`](vercel.json): framework `vite`, build `npm run build`, output `dist`, serverless functions from `api/*.ts` with `maxDuration: 15s`, and an SPA fallback rewrite (Vercel checks the filesystem and function routes before rewrites, so `/assets/*` and `/api/*` are not swallowed).
+
+First-time setup:
+
+1. Import the repo at https://vercel.com/new. Framework should auto-detect as **Vite**; leave the build/output overrides that `vercel.json` provides.
+2. In **Project → Settings → Environment Variables**, set for *Production* (and *Preview* if you want branch previews to persist submissions — usually you don't):
+   - `GITHUB_TOKEN` — fine-grained PAT, scope: **Contents: Read and write** on `victogarcia4/ap2-notebook-lm-fall2026`. Nothing else needed.
+   - `ADMIN_PASSWORD` — freeform string; students never see it, only the instructor uses it via the submission modal.
+   - `GEMINI_API_KEY` — optional today (only used if `GeminiNotebookName.tsx` grows into a real Gemini call; currently it's a static component and safe to omit).
+3. Deploy. Confirm at `/api/notebooks` and `/api/games` — both should return `[]` on a fresh repo.
+4. If you get `500 Server misconfiguration: GITHUB_TOKEN is not set.` on the endpoints, the env var didn't land in the environment you deployed to — redeploy after adding it (Vercel does *not* hot-reload env vars into an existing deployment).
+
+Notes:
+
+- No custom Node version pin — Vercel picks the current default (Node 20+ at time of writing), which matches the `@vercel/node@^5` in `devDependencies`.
+- No `.vercelignore` is needed; `.gitignore` already excludes `node_modules`, `dist`, `.env*`.
+- The Netlify config (`netlify.toml`) is left in the tree from the previous project but is not used — Vercel is primary because the API depends on `@vercel/node` types. Safe to delete if you don't plan to run a Netlify preview.
 
 ## 7. Conventions worth respecting
 
@@ -138,6 +162,14 @@ Same for `/api/games`. All writes commit to `data/*.json` on `main` via the Cont
 ## Session Log
 
 Append newest at the top. One entry per meaningful session. Keep to the shape below.
+
+### 2026-08-22 — Vercel deploy-ready (Claude Opus 4.7)
+- Rewrote [`vercel.json`](vercel.json): explicit `framework: vite`, `buildCommand`, `outputDirectory: dist`, `installCommand`, `functions."api/*.ts".maxDuration: 15`, and a single SPA-fallback rewrite. Removed the redundant identity rewrite for `/api/*` (Vercel already routes function paths before rewrites).
+- Verified the client only talks to `/api/notebooks` and `/api/games` (found in `SubmittedNotebooks.tsx` and `AIGameRepository.tsx`) — no `process.env`/`import.meta.env` leakage into the bundle, so no `VITE_*` env plumbing is needed.
+- Confirmed `GeminiNotebookName.tsx` is a static text component today — `GEMINI_API_KEY` is *not* required for the current app; noted as optional in §6a.
+- Fixed §6 in this HANDOFF: the API is **action-based POST** (`verify` / `save`) with `x-admin-password` header and a full-array replace on write, not the REST verbs I originally documented.
+- Added §6a with Vercel first-time setup: import, env vars (`GITHUB_TOKEN`, `ADMIN_PASSWORD`, optional `GEMINI_API_KEY`), and the "every submission = new deploy" gotcha.
+- **Next unfinished work:** import the repo on Vercel and set the three env vars; first deploy; component CSS migration off the compatibility bridge.
 
 ### 2026-08-22 — Initial scaffold + HANDOFF authored (Claude Opus 4.7)
 - Cloned `ap2-notebooklm-summer26` as the starting shape, dropped its git history.
