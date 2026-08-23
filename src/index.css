@@ -1,0 +1,527 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #16150f;
+  --night: #080808;
+  --night-2: #0f0f0f;
+  --paper: #faf7ef;
+  --paper-2: #f4f1e8;
+  --paper-3: #eae5d7;
+  --muted: #85837a;
+  --line: rgba(22, 21, 15, 0.18);
+  --line-dark: rgba(255, 255, 255, 0.14);
+  --acid: #cdf13b;
+  --acid-hover: #bce028;
+  --green: #00ff87;
+  --blue: #6db3ff;
+  --red: #c0392b;
+  --orange: #ff4f00;
+  --shadow: 0 24px 70px rgba(8, 8, 8, 0.24);
+  --card-shadow: 0 8px 30px rgba(8, 8, 8, 0.08);
+}
+
+@theme {
+  --font-sans: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-mono: 'Spline Sans Mono', ui-monospace, monospace;
+  --font-hand: 'Caveat', cursive;
+
+  /* Playful Geometric fallback tokens (kept so existing AP2 utility class
+     references still compile against a valid palette) */
+  --color-background: #faf7ef;
+  --color-foreground: #16150f;
+  --color-muted: #f4f1e8;
+  --color-muted-foreground: #85837a;
+  --color-accent: #cdf13b;
+  --color-accent-foreground: #16150f;
+  --color-secondary: #6db3ff;
+  --color-tertiary: #ff4f00;
+  --color-quaternary: #00ff87;
+  --color-border: #16150f;
+  --color-input: #ffffff;
+  --color-card: #faf7ef;
+  --color-ring: #cdf13b;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    color: var(--ink);
+    background:
+      linear-gradient(180deg, rgba(205, 241, 59, 0.30) 0 7rem, transparent 7rem),
+      radial-gradient(circle at 72% 14%, rgba(205, 241, 59, 0.18), transparent 24rem),
+      linear-gradient(180deg, #efece2, #e8e4d6 52%, #f2efe7);
+    font-family: 'Hanken Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    min-height: 100vh;
+  }
+
+  body::before {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    content: "";
+    opacity: 0.14;
+    background-image:
+      linear-gradient(rgba(22, 21, 15, 0.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(22, 21, 15, 0.12) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  }
+
+  .font-hand {
+    font-family: 'Caveat', cursive;
+  }
+
+  code, pre, .font-mono, input.font-mono, select.font-mono {
+    font-family: 'Spline Sans Mono', monospace;
+  }
+}
+
+/* Ticker Marquee Strip */
+.top-strip {
+  overflow: hidden;
+  background: var(--acid);
+  color: var(--night);
+  border-bottom: 1px solid rgba(22, 21, 15, 0.18);
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 28s linear infinite;
+}
+
+.marquee span {
+  padding: 0.55rem 1.25rem;
+  font-family: "Spline Sans Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.marquee span::after {
+  padding-left: 1.25rem;
+  color: rgba(22, 21, 15, 0.55);
+  content: "/";
+}
+
+/* Navigation Pill Header */
+.site-header {
+  position: sticky;
+  top: 0.75rem;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 0.9rem;
+  color: var(--ink);
+  background: rgba(250, 247, 239, 0.88);
+  border: 1px solid rgba(22, 21, 15, 0.18);
+  border-radius: 100px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 10px 36px rgba(8, 8, 8, 0.12);
+}
+
+.brand-mark {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  color: var(--paper);
+  background: var(--night);
+  border-radius: 50%;
+  font-family: "Spline Sans Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+/* Notebook Ruled Card / Binder Page Styling */
+.notebook-ruled-card {
+  position: relative;
+  background:
+    linear-gradient(90deg, rgba(192, 57, 43, 0.22) 2.6rem, transparent 2.6rem 2.75rem, transparent 100%),
+    repeating-linear-gradient(180deg, transparent 0 2.5rem, rgba(22, 21, 15, 0.08) 2.5rem 2.56rem),
+    linear-gradient(135deg, rgba(250, 247, 239, 0.98), rgba(232, 228, 214, 0.94));
+  border: 1px solid rgba(22, 21, 15, 0.18);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 1.75rem 1.75rem 1.75rem 3.5rem;
+}
+
+.notebook-ruled-card::before {
+  position: absolute;
+  top: 1.25rem;
+  bottom: 1.25rem;
+  left: 0.85rem;
+  width: 1.1rem;
+  content: "";
+  background:
+    radial-gradient(circle at 50% 0.85rem, #e8e4d6 0 0.22rem, rgba(22, 21, 15, 0.5) 0.25rem 0.35rem, transparent 0.38rem)
+      0 0 / 1.1rem 2.5rem repeat-y;
+  filter: drop-shadow(0.25rem 0 0 rgba(22, 21, 15, 0.12));
+}
+
+/* Dark NotebookLM Card with Watermark */
+.notebook-dark-card {
+  position: relative;
+  background: var(--night);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  color: var(--paper);
+  overflow: hidden;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.notebook-dark-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(205, 241, 59, 0.4);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+
+.notebook-dark-card::after {
+  position: absolute;
+  right: -1rem;
+  bottom: -1.5rem;
+  color: rgba(205, 241, 59, 0.08);
+  content: "LM";
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-size: 6.5rem;
+  font-weight: 800;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.notebook-dark-card.slo-watermark::after {
+  content: "SLO";
+  font-size: 5.5rem;
+}
+
+.notebook-dark-card.game-watermark::after {
+  content: "AI";
+  font-size: 6.5rem;
+  color: rgba(0, 255, 135, 0.09);
+}
+
+/* Paper Surface Cards */
+.paper-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(8, 8, 8, 0.06);
+}
+
+.paper-card-2 {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+/* Standardized Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.1rem;
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--night);
+  background: var(--acid);
+  border: 1px solid var(--ink);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  box-shadow: 0 4px 0 rgba(205, 241, 59, 0.3);
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: var(--acid-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(205, 241, 59, 0.35);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.1rem;
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+.btn-secondary:hover {
+  background: var(--paper-3);
+  border-color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.1rem;
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--paper);
+  background: var(--night);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease;
+}
+.btn-dark:hover {
+  background: var(--night-2);
+  transform: translateY(-2px);
+  color: var(--acid);
+}
+
+/* Pills and Badges */
+.pill {
+  display: inline-flex;
+  min-height: 1.55rem;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.18rem 0.55rem;
+  color: var(--night);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  font-family: 'Spline Sans Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pill.class          { background: #eef5ff; border-color: rgba(47, 85, 212, 0.24); color: #1a44a5; }
+.pill.lecture-exam   { background: #ffe9dc; border-color: rgba(255, 79, 0, 0.26);  color: #c43b00; }
+.pill.lab-exam       { background: #fff3b8; border-color: rgba(153, 184, 31, 0.4); color: #5c700d; }
+.pill.notebook       { background: #ebffd7; border-color: rgba(0, 255, 135, 0.32); color: #0d6e3e; }
+.pill.zoom           { background: #ece9ff; border-color: rgba(97, 76, 255, 0.28); color: #4b36cc; }
+.pill.acid           { background: rgba(205, 241, 59, 0.2); border-color: rgba(205, 241, 59, 0.45); color: #5b7100; }
+
+.card-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  background: rgba(205, 241, 59, 0.15);
+  color: var(--acid);
+  border: 1px solid rgba(205, 241, 59, 0.3);
+  border-radius: 100px;
+  font-family: "Spline Sans Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.due-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.8rem;
+  padding: 0.3rem 0.55rem;
+  color: var(--paper);
+  background: var(--night);
+  border-radius: 6px;
+  font-family: "Spline Sans Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.due-badge.done    { color: var(--night); background: var(--green); }
+.due-badge.pending { color: var(--night); background: var(--orange); }
+.due-badge.future  { color: var(--ink);   background: var(--paper-2); border: 1px solid var(--line); }
+
+/* Link Action Buttons */
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: all 180ms ease;
+  cursor: pointer;
+}
+
+.link-btn.slo-btn {
+  background: var(--acid);
+  color: var(--night);
+  border: 1px solid var(--acid);
+}
+.link-btn.slo-btn:hover {
+  background: var(--acid-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(205, 241, 59, 0.25);
+}
+
+.link-btn.tutor-btn {
+  background: rgba(109, 179, 255, 0.15);
+  color: var(--blue);
+  border: 1px solid rgba(109, 179, 255, 0.4);
+}
+.link-btn.tutor-btn:hover {
+  background: rgba(109, 179, 255, 0.3);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(109, 179, 255, 0.2);
+}
+
+/* Status dots */
+.status-dot {
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  border: 1px solid rgba(22, 21, 15, 0.35);
+}
+.status-dot.pending      { background: var(--orange); }
+.status-dot.in-progress  { background: var(--blue); }
+.status-dot.done         { background: var(--green); }
+
+/* Animations */
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: rise-in 360ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+/* ── Compatibility bridge for existing AP2 components ────────────────────────
+   The existing AP2 components (candy-button, pop-shadow, dot-grid,
+   speech-bubble, leaf-shape…) are re-mapped to the ap1 paper/acid palette so
+   nothing renders unstyled while components are progressively migrated to the
+   new btn-primary / paper-card / pill / notebook-dark-card system. */
+
+.paper-texture, .vignette { display: none; }
+
+.dot-grid {
+  background-color: var(--paper);
+  background-image: radial-gradient(rgba(22, 21, 15, 0.18) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+.dot-grid-subtle {
+  background-color: transparent;
+  background-image: radial-gradient(rgba(22, 21, 15, 0.10) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Hard-shadow utility → soft paper card shadow */
+.pop-shadow-sm { box-shadow: 0 3px 12px rgba(8, 8, 8, 0.10); }
+.pop-shadow,
+.pop-shadow-md { box-shadow: 0 8px 24px rgba(8, 8, 8, 0.14); }
+.pop-shadow-lg { box-shadow: 0 16px 44px rgba(8, 8, 8, 0.20); }
+.pop-shadow-pink   { box-shadow: 0 12px 32px rgba(255, 79, 0, 0.22); }
+.pop-shadow-violet { box-shadow: 0 12px 32px rgba(97, 76, 255, 0.22); }
+.pop-shadow-yellow { box-shadow: 0 12px 32px rgba(205, 241, 59, 0.35); }
+.pop-shadow-mint   { box-shadow: 0 12px 32px rgba(0, 255, 135, 0.22); }
+
+.speech-bubble { border-radius: 16px 16px 16px 0px; }
+.leaf-shape    { border-radius: 24px 0px 24px 24px; }
+
+.bounce-transition {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Candy button family → ap1 acid/paper button family */
+.candy-button {
+  background-color: var(--acid);
+  color: var(--night);
+  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  font-weight: 800;
+  border: 1px solid var(--ink);
+  border-radius: 100px;
+  padding: 0.6rem 1.1rem;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  box-shadow: 0 4px 0 rgba(205, 241, 59, 0.3);
+  cursor: pointer;
+}
+.candy-button:hover {
+  background-color: var(--acid-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(205, 241, 59, 0.35);
+}
+.candy-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 0 rgba(205, 241, 59, 0.3);
+}
+
+.candy-button-pink  { background-color: var(--orange); color: var(--paper); }
+.candy-button-yellow{ background-color: var(--acid);   color: var(--night); }
+.candy-button-mint  { background-color: var(--green);  color: var(--night); }
+
+.candy-button-outline {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  font-weight: 700;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 0.6rem 1.1rem;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+  cursor: pointer;
+}
+.candy-button-outline:hover {
+  background-color: var(--paper-3);
+  border-color: var(--ink);
+  transform: translateY(-1px);
+}
+
+/* Wiggle + float animations (kept from AP2, tuned lighter) */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25%      { transform: rotate(3deg); }
+  75%      { transform: rotate(-3deg); }
+}
+.hover-wiggle:hover { animation: wiggle 0.4s ease-in-out infinite; }
+
+@keyframes float-shape-1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%      { transform: translateY(-10px) rotate(6deg); }
+}
+@keyframes float-shape-2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%      { transform: translateY(10px) rotate(-6deg); }
+}
+.animate-float-1 { animation: float-shape-1 6s ease-in-out infinite; }
+.animate-float-2 { animation: float-shape-2 8s ease-in-out infinite; }
+
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+.marquee-content:hover { animation-play-state: paused; }

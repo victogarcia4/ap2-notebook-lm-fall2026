@@ -1,0 +1,6 @@
+{
+  "name": "BIOL 2402 Active Mastery Learning Portal",
+  "description": "An active concept mastery learning portal for Human Anatomy & Physiology II, matching standard HAPS learning outcomes with Google NotebookLM instructions and student presentation covenants.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
