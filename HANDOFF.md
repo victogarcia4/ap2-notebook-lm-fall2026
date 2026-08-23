@@ -163,7 +163,48 @@ Notes:
 
 Append newest at the top. One entry per meaningful session. Keep to the shape below.
 
-### 2026-08-22 — Remove Reset Assignments; fix admin login (Claude Opus 4.7)
+### 2026-08-22 — Root cause: GITHUB_TOKEN empty on Vercel (Claude Sonnet 4.6)
+
+**STATUS: BLOCKED — waiting on owner to supply a valid GITHUB_TOKEN in Vercel.**
+
+#### What was found
+Every call to `/api/notebooks` and `/api/games` returns HTTP 500 with the exact body:
+```json
+{"error":"Server misconfiguration: GITHUB_TOKEN is not set."}
+```
+This is emitted by the first guard in both API handlers:
+```typescript
+if (!GITHUB_TOKEN) {
+  return res.status(500).json({ error: 'Server misconfiguration: GITHUB_TOKEN is not set.' });
+}
+```
+In JavaScript an empty string (`""`) is falsy, so `!GITHUB_TOKEN` is `true` even when the env var name exists. The Vercel dashboard shows `GITHUB_TOKEN` listed under Environment Variables, but its **value was saved empty** (or as whitespace). The API never reaches the `ADMIN_PASSWORD` check — that is why the admin password appears to "not work." The password itself is fine; the token is the blocker.
+
+Confirmed via direct HTTP probe of the live production URL `https://ap2-notebook-lm-fall2026.vercel.app/api/notebooks` through the Vercel MCP.
+
+#### What the owner must do before handing off to the next model
+
+1. **Create a GitHub fine-grained PAT** at `https://github.com/settings/tokens?type=beta`:
+   - Token name: anything (e.g. `vercel-ap2-fall2026`)
+   - Repository access: only `victogarcia4/ap2-notebook-lm-fall2026`
+   - Permissions → **Contents: Read and write**
+   - Generate and copy the token immediately (shown once; starts with `github_pat_…`)
+
+2. **Edit `GITHUB_TOKEN` in Vercel** → Project Settings → Environment Variables → `···` next to `GITHUB_TOKEN` → Edit → paste the token → ensure **Production** is checked → Save.
+
+3. **Also verify `ADMIN_PASSWORD`** the same way — edit the value, retype `Zulybeth97@`, save. It may also have been saved empty.
+
+4. **Redeploy**: Deployments tab → `···` on the latest deployment → Redeploy. New deployments pick up env var values; existing ones do not hot-reload.
+
+5. **Verify**: after redeploy, `GET https://ap2-notebook-lm-fall2026.vercel.app/api/notebooks` should return `[]` (not 500). Then the admin login will work.
+
+#### What the next model should do
+- Confirm the API is healthy: `GET /api/notebooks` → 200 `[]`.
+- Confirm admin login works: `POST /api/notebooks` with header `x-admin-password: Zulybeth97@` and body `{"action":"verify"}` → 200 `{"authenticated":true}`.
+- If both pass, the app is fully functional and ready for real notebook submissions.
+- Optional next task: CSS migration off the compatibility bridge (see §5 and §9).
+
+### 2026-08-22 — Remove Reset Assignments; fix admin login (Claude Sonnet 4.6)
 - Removed the **Reset Assignments** button from `RosterMatrix.tsx` entirely. Removed associated `onRandomize` prop, `policy` state, and `handleRandomize` local handler. Removed `handleRandomize` and dead `handleResetDefault` from `App.tsx`. `DistributionPolicy` import still present in `App.tsx` (still used by `initDefaultRoster`/`runAllocation`/`handleImportRoster`).
 - Fixed `verifyAdmin` in both `SubmittedNotebooks.tsx` and `AIGameRepository.tsx`: when the POST returns **404** (Vite dev server, no serverless functions), the function now returns `true` so the admin UI unlocks locally. On Vercel the API runs normally and returns 200/401. The actual save/delete calls enforce auth via 401 regardless of env.
 - TypeScript clean (`npm run lint` zero errors). Committed and pushed as `f6a8ac2`.
