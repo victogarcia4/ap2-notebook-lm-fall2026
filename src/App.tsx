@@ -44,7 +44,18 @@ export default function App() {
           savedRoster.splice(instructorIndex + 1, 0, melissa);
         }
 
-        const updatedRoster = runAllocation(savedRoster);
+        const mergedRoster = savedRoster.map(student => {
+          const defaultMatch = defaultStudents.find(ds => ds.id === student.id);
+          if (defaultMatch?.notebookLinks) {
+            return {
+              ...student,
+              notebookLinks: { ...defaultMatch.notebookLinks, ...student.notebookLinks }
+            };
+          }
+          return student;
+        });
+
+        const updatedRoster = runAllocation(mergedRoster);
         setStudents(updatedRoster);
         localStorage.setItem('biol2402_students', JSON.stringify(updatedRoster));
       } catch (e) {
@@ -146,11 +157,11 @@ export default function App() {
 * **Level:** ${student.level}
 
 ## Assigned HAPS Learning Outcomes
-1. **Lecture Exam 1 (Ch. 13-15):** \`${student.exam1?.id || ""}\` - ${student.exam1?.topic || ""}: ${student.exam1?.desc || ""}
-2. **Lecture Exam 2 (Ch. 16, 19):** \`${student.exam2?.id || ""}\` - ${student.exam2?.topic || ""}: ${student.exam2?.desc || ""}
-3. **Lecture Exam 3 (Ch. 17-18):** \`${student.exam3?.id || ""}\` - ${student.exam3?.topic || ""}: ${student.exam3?.desc || ""}
-4. **Lecture Exam 4 (Ch. 20-21):** \`${student.exam4?.id || ""}\` - ${student.exam4?.topic || ""}: ${student.exam4?.desc || ""}
-5. **Lecture Exam 5 (Ch. 22-24):** \`${student.exam5?.id || ""}\` - ${student.exam5?.topic || ""}: ${student.exam5?.desc || ""}
+1. **Lecture Exam 1 (Ch. 13-15):** \`${student.exam1?.id || ""}\` - ${student.exam1?.topic || ""}: ${student.exam1?.desc || ""}${student.notebookLinks?.exam1 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam1}` : ''}
+2. **Lecture Exam 2 (Ch. 16, 19):** \`${student.exam2?.id || ""}\` - ${student.exam2?.topic || ""}: ${student.exam2?.desc || ""}${student.notebookLinks?.exam2 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam2}` : ''}
+3. **Lecture Exam 3 (Ch. 17-18):** \`${student.exam3?.id || ""}\` - ${student.exam3?.topic || ""}: ${student.exam3?.desc || ""}${student.notebookLinks?.exam3 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam3}` : ''}
+4. **Lecture Exam 4 (Ch. 20-21):** \`${student.exam4?.id || ""}\` - ${student.exam4?.topic || ""}: ${student.exam4?.desc || ""}${student.notebookLinks?.exam4 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam4}` : ''}
+5. **Lecture Exam 5 (Ch. 22-24):** \`${student.exam5?.id || ""}\` - ${student.exam5?.topic || ""}: ${student.exam5?.desc || ""}${student.notebookLinks?.exam5 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam5}` : ''}
 
 ---
 *Signed by Student and Instructor for Academic Term 2026.*

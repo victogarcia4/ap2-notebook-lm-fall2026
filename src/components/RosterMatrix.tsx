@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Student, AcademicSession } from '../types';
 import { hapsOutcomes } from '../data/outcomes';
-import { Search, Clipboard, Download, Printer, Settings, Award } from 'lucide-react';
+import { Search, Clipboard, Download, Printer, Settings, Award, BookOpen, ExternalLink } from 'lucide-react';
 
 interface RosterMatrixProps {
   students: Student[];
@@ -200,57 +200,137 @@ export default function RosterMatrix({
                       </td>
                       <td className="p-4 border-r-2 border-[#1E293B] text-center">
                         {student.exam1 && (
-                          <span
-                            onClick={() => onShowOutcomeDetails('exam1', idx)}
-                            title={student.exam1.desc}
-                            className="inline-block text-[10px] font-mono font-black text-[#1E293B] bg-[#FFFDF5] border-2 border-[#1E293B] rounded-lg px-2.5 py-1.5 cursor-pointer hover:bg-[#8B5CF6] hover:text-white transition-all hover:scale-105 active:scale-95 truncate max-w-[110px]"
-                          >
-                            {student.exam1.id}
-                          </span>
+                          <div className="flex flex-col items-center gap-1">
+                            <span
+                              onClick={() => onShowOutcomeDetails('exam1', idx)}
+                              title={student.exam1.desc}
+                              className="inline-block text-[10px] font-mono font-black text-[#1E293B] bg-[#FFFDF5] border-2 border-[#1E293B] rounded-lg px-2.5 py-1.5 cursor-pointer hover:bg-[#8B5CF6] hover:text-white transition-all hover:scale-105 active:scale-95 truncate max-w-[110px]"
+                            >
+                              {student.exam1.id}
+                            </span>
+                            {student.notebookLinks?.exam1 && (
+                              <a
+                                href={student.notebookLinks.exam1}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={`Open ${student.name}'s Exam 1 NotebookLM`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="inline-flex items-center gap-1 text-[9px] font-display font-black text-[#8B5CF6] hover:text-white bg-[#EDE9FE] hover:bg-[#8B5CF6] border border-[#8B5CF6] rounded-md px-1.5 py-0.5 transition-all shadow-xs active:translate-y-[1px]"
+                              >
+                                <BookOpen className="w-2.5 h-2.5" />
+                                <span>NLM 1</span>
+                                <ExternalLink className="w-2 h-2" />
+                              </a>
+                            )}
+                          </div>
                         )}
                       </td>
                       <td className="p-4 border-r-2 border-[#1E293B] text-center">
                         {student.exam2 && (
-                          <span
-                            onClick={() => onShowOutcomeDetails('exam2', idx)}
-                            title={student.exam2.desc}
-                            className="inline-block text-[10px] font-mono font-black text-[#1E293B] bg-[#FFFDF5] border-2 border-[#1E293B] rounded-lg px-2.5 py-1.5 cursor-pointer hover:bg-[#F472B6] hover:text-white transition-all hover:scale-105 active:scale-95 truncate max-w-[110px]"
-                          >
-                            {student.exam2.id}
-                          </span>
+                          <div className="flex flex-col items-center gap-1">
+                            <span
+                              onClick={() => onShowOutcomeDetails('exam2', idx)}
+                              title={student.exam2.desc}
+                              className="inline-block text-[10px] font-mono font-black text-[#1E293B] bg-[#FFFDF5] border-2 border-[#1E293B] rounded-lg px-2.5 py-1.5 cursor-pointer hover:bg-[#F472B6] hover:text-white transition-all hover:scale-105 active:scale-95 truncate max-w-[110px]"
+                            >
+                              {student.exam2.id}
+                            </span>
+                            {student.notebookLinks?.exam2 && (
+                              <a
+                                href={student.notebookLinks.exam2}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={`Open ${student.name}'s Exam 2 NotebookLM`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="inline-flex items-center gap-1 text-[9px] font-display font-black text-[#DB2777] hover:text-white bg-[#FCE7F3] hover:bg-[#DB2777] border border-[#DB2777] rounded-md px-1.5 py-0.5 transition-all shadow-xs active:translate-y-[1px]"
+                              >
+                                <BookOpen className="w-2.5 h-2.5" />
+                                <span>NLM 2</span>
+                                <ExternalLink className="w-2 h-2" />
+                              </a>
+                            )}
+                          </div>
                         )}
                       </td>
                       <td className="p-4 border-r-2 border-[#1E293B] text-center">
                         {student.exam3 && (
-                          <span
-                            onClick={() => onShowOutcomeDetails('exam3', idx)}
-                            title={student.exam3.desc}
-                            className="inline-block text-[10px] font-mono font-black text-[#1E293B] bg-[#FFFDF5] border-2 border-[#1E293B] rounded-lg px-2.5 py-1.5 cursor-pointer hover:bg-[#FBBF24] hover:text-[#1E293B] transition-all hover:scale-105 active:scale-95 truncate max-w-[110px]"
-                          >
-                            {student.exam3.id}
-                          </span>
+                          <div className="flex flex-col items-center gap-1">
+                            <span
+                              onClick={() => onShowOutcomeDetails('exam3', idx)}
+                              title={student.exam3.desc}
+                              className="inline-block text-[10px] font-mono font-black text-[#1E293B] bg-[#FFFDF5] border-2 border-[#1E293B] rounded-lg px-2.5 py-1.5 cursor-pointer hover:bg-[#FBBF24] hover:text-[#1E293B] transition-all hover:scale-105 active:scale-95 truncate max-w-[110px]"
+                            >
+                              {student.exam3.id}
+                            </span>
+                            {student.notebookLinks?.exam3 && (
+                              <a
+                                href={student.notebookLinks.exam3}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={`Open ${student.name}'s Exam 3 NotebookLM`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="inline-flex items-center gap-1 text-[9px] font-display font-black text-[#B45309] hover:text-white bg-[#FEF3C7] hover:bg-[#B45309] border border-[#B45309] rounded-md px-1.5 py-0.5 transition-all shadow-xs active:translate-y-[1px]"
+                              >
+                                <BookOpen className="w-2.5 h-2.5" />
+                                <span>NLM 3</span>
+                                <ExternalLink className="w-2 h-2" />
+                              </a>
+                            )}
+                          </div>
                         )}
                       </td>
                       <td className="p-4 border-r-2 border-[#1E293B] text-center">
                         {student.exam4 && (
-                          <span
-                            onClick={() => onShowOutcomeDetails('exam4', idx)}
-                            title={student.exam4.desc}
-                            className="inline-block text-[10px] font-mono font-black text-[#1E293B] bg-[#FFFDF5] border-2 border-[#1E293B] rounded-lg px-2.5 py-1.5 cursor-pointer hover:bg-[#34D399] hover:text-[#1E293B] transition-all hover:scale-105 active:scale-95 truncate max-w-[110px]"
-                          >
-                            {student.exam4.id}
-                          </span>
+                          <div className="flex flex-col items-center gap-1">
+                            <span
+                              onClick={() => onShowOutcomeDetails('exam4', idx)}
+                              title={student.exam4.desc}
+                              className="inline-block text-[10px] font-mono font-black text-[#1E293B] bg-[#FFFDF5] border-2 border-[#1E293B] rounded-lg px-2.5 py-1.5 cursor-pointer hover:bg-[#34D399] hover:text-[#1E293B] transition-all hover:scale-105 active:scale-95 truncate max-w-[110px]"
+                            >
+                              {student.exam4.id}
+                            </span>
+                            {student.notebookLinks?.exam4 && (
+                              <a
+                                href={student.notebookLinks.exam4}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={`Open ${student.name}'s Exam 4 NotebookLM`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="inline-flex items-center gap-1 text-[9px] font-display font-black text-[#047857] hover:text-white bg-[#D1FAE5] hover:bg-[#047857] border border-[#047857] rounded-md px-1.5 py-0.5 transition-all shadow-xs active:translate-y-[1px]"
+                              >
+                                <BookOpen className="w-2.5 h-2.5" />
+                                <span>NLM 4</span>
+                                <ExternalLink className="w-2 h-2" />
+                              </a>
+                            )}
+                          </div>
                         )}
                       </td>
                       <td className="p-4 border-r-2 border-[#1E293B] text-center">
                         {student.exam5 && (
-                          <span
-                            onClick={() => onShowOutcomeDetails('exam5', idx)}
-                            title={student.exam5.desc}
-                            className="inline-block text-[10px] font-mono font-black text-[#1E293B] bg-[#FFFDF5] border-2 border-[#1E293B] rounded-lg px-2.5 py-1.5 cursor-pointer hover:bg-[#8B5CF6] hover:text-white transition-all hover:scale-105 active:scale-95 truncate max-w-[110px]"
-                          >
-                            {student.exam5.id}
-                          </span>
+                          <div className="flex flex-col items-center gap-1">
+                            <span
+                              onClick={() => onShowOutcomeDetails('exam5', idx)}
+                              title={student.exam5.desc}
+                              className="inline-block text-[10px] font-mono font-black text-[#1E293B] bg-[#FFFDF5] border-2 border-[#1E293B] rounded-lg px-2.5 py-1.5 cursor-pointer hover:bg-[#8B5CF6] hover:text-white transition-all hover:scale-105 active:scale-95 truncate max-w-[110px]"
+                            >
+                              {student.exam5.id}
+                            </span>
+                            {student.notebookLinks?.exam5 && (
+                              <a
+                                href={student.notebookLinks.exam5}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={`Open ${student.name}'s Exam 5 NotebookLM`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="inline-flex items-center gap-1 text-[9px] font-display font-black text-[#8B5CF6] hover:text-white bg-[#EDE9FE] hover:bg-[#8B5CF6] border border-[#8B5CF6] rounded-md px-1.5 py-0.5 transition-all shadow-xs active:translate-y-[1px]"
+                              >
+                                <BookOpen className="w-2.5 h-2.5" />
+                                <span>NLM 5</span>
+                                <ExternalLink className="w-2 h-2" />
+                              </a>
+                            )}
+                          </div>
                         )}
                       </td>
                       <td className="p-4 text-center">

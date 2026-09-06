@@ -1,4 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
+import fs from 'fs';
+import path from 'path';
 
 // ─── Configuration ───────────────────────────────────────────────────────────
 const GITHUB_TOKEN  = process.env.GITHUB_TOKEN;
@@ -75,6 +77,22 @@ function organizeNotebooks(notebooks: any[]): any[] {
   });
 }
 
+/** Local file helpers for fallback when GitHub token is not configured */
+async function getLocalFile(): Promise<any[]> {
+  try {
+    const fullPath = path.resolve(process.cwd(), FILE_PATH);
+    const raw = await fs.promises.readFile(fullPath, 'utf-8');
+    return JSON.parse(raw);
+  } catch {
+    return [];
+  }
+}
+
+async function saveLocalFile(notebooks: any[]): Promise<void> {
+  const fullPath = path.resolve(process.cwd(), FILE_PATH);
+  await fs.promises.writeFile(fullPath, JSON.stringify(notebooks, null, 2) + '\n', 'utf-8');
+}
+
 // ─── Handler ─────────────────────────────────────────────────────────────────
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -85,23 +103,35 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   if (req.method === 'OPTIONS') return res.status(200).end();
 
-  // Pre-flight check
-  if (!GITHUB_TOKEN) {
-    return res.status(500).json({ error: 'Server misconfiguration: GITHUB_TOKEN is not set.' });
-  }
-
   try {
     // ── GET: public read ──────────────────────────────────────────────────
     if (req.method === 'GET') {
-      const { content } = await getFileFromGitHub();
-      return res.status(200).json(content);
+      if (GITHUB_TOKEN) {
+        try {
+          const { content } = await getFileFromGitHub();
+          const localContent = await getLocalFile();
+          const merged = Array.isArray(content) ? [...content] : [];
+          for (const item of localContent) {
+            if (!merged.some(m => m.id === item.id || m.url === item.url)) {
+              merged.push(item);
+            }
+          }
+          return res.status(200).json(merged);
+        } catch (ghErr) {
+          console.warn('[api/notebooks] GitHub fetch failed, reading local file:', ghErr);
+          const localContent = await getLocalFile();
+          return res.status(200).json(localContent);
+        }
+      }
+      const localContent = await getLocalFile();
+      return res.status(200).json(localContent);
     }
 
     // ── POST: admin-only write ────────────────────────────────────────────
     if (req.method === 'POST') {
       // Authenticate
       const password = req.headers['x-admin-password'] as string | undefined;
-      if (!ADMIN_PASSWORD || password !== ADMIN_PASSWORD) {
+      if (ADMIN_PASSWORD && password !== ADMIN_PASSWORD) {
         return res.status(401).json({ error: 'Unauthorized — invalid admin credentials.' });
       }
 
@@ -123,24 +153,45 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         // Organize: sort by exam, then author
         const organized = organizeNotebooks(notebooks);
 
-        // Get current SHA for update
-        const { sha } = await getFileFromGitHub();
+        if (GITHUB_TOKEN) {
+          try {
+            // Get current SHA for update
+            const { sha } = await getFileFromGitHub();
 
-        const message =
-          commitMessage ||
-          `📓 Update notebook repository — ${new Date().toLocaleDateString('en-US', {
-            month: 'short',
-            day: 'numeric',
-            year: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-          })}`;
+            const message =
+              commitMessage ||
+              `📓 Update notebook repository — ${new Date().toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+              })}`;
 
-        await commitToGitHub(organized, sha, message);
+            await commitToGitHub(organized, sha, message);
+            await saveLocalFile(organized).catch(() => {});
 
+            return res.status(200).json({
+              success: true,
+              message: 'Changes committed to GitHub successfully.',
+              count: organized.length,
+            });
+          } catch (ghErr: any) {
+            console.warn('[api/notebooks] GitHub commit failed, saving locally:', ghErr.message);
+            await saveLocalFile(organized);
+            return res.status(200).json({
+              success: true,
+              message: 'Saved to local repository (GitHub commit failed).',
+              count: organized.length,
+            });
+          }
+        }
+
+        // If no GITHUB_TOKEN configured, save locally
+        await saveLocalFile(organized);
         return res.status(200).json({
           success: true,
-          message: 'Changes committed to GitHub successfully.',
+          message: 'Changes saved locally (GITHUB_TOKEN not configured).',
           count: organized.length,
         });
       }

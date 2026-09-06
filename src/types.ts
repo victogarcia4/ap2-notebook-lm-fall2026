@@ -22,6 +22,7 @@ export interface Student {
   exam3?: LearningOutcome;
   exam4?: LearningOutcome;
   exam5?: LearningOutcome;
+  notebookLinks?: Partial<Record<'exam1' | 'exam2' | 'exam3' | 'exam4' | 'exam5', string>>;
 }
 
 export interface SubmittedNotebook {

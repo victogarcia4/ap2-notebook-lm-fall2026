@@ -5,7 +5,17 @@ export const defaultStudents: Student[] = [
   { id: "7998227", name: "Alejandre, Barbara", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "8086296", name: "Arzola Garza, Maria", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "1065979", name: "Banks, Quiandria", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
-  { id: "7893493", name: "Bell, Charlie", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "7893493", 
+    name: "Bell, Charlie", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/ce9bb629-90bf-48e7-bf9d-545e57420ae6"
+    }
+  },
   { id: "8082474", name: "Clark, Tiya", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "0609900", name: "Cooper, Kendra", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "8149636", name: "Dacus, Lynli", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
@@ -18,14 +28,46 @@ export const defaultStudents: Student[] = [
   { id: "7216988", name: "Harrison, Desmon", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "8076059", name: "Henegariu, Sarah", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7363842", name: "Ledesma, Debora", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
-  { id: "0690788", name: "Lerma, Stephanie", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "0690788", 
+    name: "Lerma, Stephanie", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/c999ebfa-bc9c-420e-852d-dfde51380367",
+      exam2: "https://notebook.google.com/notebook/9d877068-5ab1-41bc-a753-d8d15f631031"
+    }
+  },
   { id: "7830128", name: "Lopez, Jesus", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "8084556", name: "Mcgruder, Chelsea", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7946077", name: "Nguyen, Hoang", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7857719", name: "Orosco, Jose", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
-  { id: "7599201", name: "Randle, Jada", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "7599201", 
+    name: "Randle, Jada", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/6f962c26-26a8-46df-9eb6-8a686321de71",
+      exam2: "https://notebook.google.com/notebook/c412d07e-d67a-4629-9841-53a9a55bb2a3"
+    }
+  },
   { id: "7780873", name: "Regalado, Keila", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
-  { id: "7889050", name: "Sallam, Noor", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "7889050", 
+    name: "Sallam, Noor", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/6e1d62d2-a482-4072-841a-4cdbbc6f2dda?authuser=1"
+    }
+  },
   { id: "7917578", name: "Seda Sepulveda, Isaias", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "0968016", name: "Turner, Erica", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7772381", name: "Vang, Chee", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },

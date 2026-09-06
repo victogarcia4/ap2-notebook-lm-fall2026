@@ -1,6 +1,6 @@
 import React from 'react';
 import { Student } from '../types';
-import { Printer, Copy, Headphones, X, Award, FileText, Check } from 'lucide-react';
+import { Printer, Copy, Headphones, X, Award, FileText, Check, BookOpen, ExternalLink } from 'lucide-react';
 import GeminiNotebookName from './GeminiNotebookName';
 
 interface LearningContractModalProps {
@@ -94,11 +94,11 @@ export default function LearningContractModal({
           {/* Outcomes list inside modal */}
           <div className="space-y-4 border-t-2 border-b-2 border-dashed border-[#1E293B] py-5">
             {[
-              { label: "Lecture Exam 1", ch: "Ch. 13-15", lo: student.exam1, color: "border-[#8B5CF6]" },
-              { label: "Lecture Exam 2", ch: "Ch. 16, 19", lo: student.exam2, color: "border-[#F472B6]" },
-              { label: "Lecture Exam 3", ch: "Ch. 17, 18", lo: student.exam3, color: "border-[#FBBF24]" },
-              { label: "Lecture Exam 4", ch: "Ch. 20, 21", lo: student.exam4, color: "border-[#34D399]" },
-              { label: "Lecture Exam 5", ch: "Ch. 22-24", lo: student.exam5, color: "border-[#8B5CF6]" }
+              { label: "Lecture Exam 1", ch: "Ch. 13-15", lo: student.exam1, color: "border-[#8B5CF6]", examKey: 'exam1' as const },
+              { label: "Lecture Exam 2", ch: "Ch. 16, 19", lo: student.exam2, color: "border-[#F472B6]", examKey: 'exam2' as const },
+              { label: "Lecture Exam 3", ch: "Ch. 17, 18", lo: student.exam3, color: "border-[#FBBF24]", examKey: 'exam3' as const },
+              { label: "Lecture Exam 4", ch: "Ch. 20, 21", lo: student.exam4, color: "border-[#34D399]", examKey: 'exam4' as const },
+              { label: "Lecture Exam 5", ch: "Ch. 22-24", lo: student.exam5, color: "border-[#8B5CF6]", examKey: 'exam5' as const }
             ].map((milestone, idx) => (
               <div key={idx} className={`grid grid-cols-1 sm:grid-cols-12 gap-2 text-xs py-2 border-l-4 ${milestone.color} pl-3 bg-white border-2 border-y-2 border-[#1E293B] rounded-xl pop-shadow-sm`}>
                 <div className="sm:col-span-3 font-semibold">
@@ -109,7 +109,23 @@ export default function LearningContractModal({
                   {milestone.lo?.id}
                 </div>
                 <div className="sm:col-span-7 text-[#64748B] leading-normal font-semibold">
-                  <span className="font-black text-[#1E293B]">{milestone.lo?.topic}:</span> {milestone.lo?.desc}
+                  <div>
+                    <span className="font-black text-[#1E293B]">{milestone.lo?.topic}:</span> {milestone.lo?.desc}
+                  </div>
+                  {student.notebookLinks?.[milestone.examKey] && (
+                    <div className="mt-2 print:hidden">
+                      <a
+                        href={student.notebookLinks[milestone.examKey]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-[10px] font-display font-black text-[#8B5CF6] hover:text-white bg-[#EDE9FE] hover:bg-[#8B5CF6] px-2.5 py-1 rounded-md border-2 border-[#1E293B] shadow-[1.5px_1.5px_0px_0px_#1E293B] transition-all cursor-pointer"
+                      >
+                        <BookOpen className="w-3 h-3 stroke-[2.5px]" />
+                        <span>Open Submitted NotebookLM</span>
+                        <ExternalLink className="w-2.5 h-2.5 stroke-[2.5px]" />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

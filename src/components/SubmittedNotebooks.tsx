@@ -90,15 +90,32 @@ export default function SubmittedNotebooks() {
       const res = await fetch(API_BASE);
       if (!res.ok) throw new Error(`Server returned ${res.status}`);
       const data: SubmittedNotebook[] = await res.json();
-      setNotebooks(data);
+      const combined = Array.isArray(data) ? [...data] : [];
+      FALLBACK_NOTEBOOKS.forEach(fallback => {
+        if (!combined.some(n => n.url === fallback.url || n.id === fallback.id)) {
+          combined.push(fallback);
+        }
+      });
+      setNotebooks(combined);
       // Cache locally as fallback
-      localStorage.setItem('biol2402_notebooks', JSON.stringify(data));
+      localStorage.setItem('biol2402_notebooks', JSON.stringify(combined));
     } catch (err: any) {
       console.warn('[SubmittedNotebooks] API fetch failed, using fallback:', err.message);
       // Fallback to localStorage or seed data
       const saved = localStorage.getItem('biol2402_notebooks');
       if (saved) {
-        try { setNotebooks(JSON.parse(saved)); } catch { setNotebooks(FALLBACK_NOTEBOOKS); }
+        try {
+          const parsed = JSON.parse(saved);
+          const combined = Array.isArray(parsed) ? [...parsed] : [];
+          FALLBACK_NOTEBOOKS.forEach(fallback => {
+            if (!combined.some(n => n.url === fallback.url || n.id === fallback.id)) {
+              combined.push(fallback);
+            }
+          });
+          setNotebooks(combined);
+        } catch {
+          setNotebooks(FALLBACK_NOTEBOOKS);
+        }
       } else {
         setNotebooks(FALLBACK_NOTEBOOKS);
       }

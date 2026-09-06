@@ -1,1 +1,69 @@
-[]
+[
+  {
+    "id": "notebook-bell-charlie-exam1",
+    "title": "General Blood Functions & Ranges NotebookLM (AP-19-K-01-01)",
+    "url": "https://notebook.google.com/notebook/ce9bb629-90bf-48e7-bf9d-545e57420ae6",
+    "author": "Bell, Charlie",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Blood — General Functions & Ranges (AP-19-K-01-01)",
+    "description": "List the general functions of blood (transport, regulation, protection) and physiological ranges.",
+    "createdAt": "2026-09-05"
+  },
+  {
+    "id": "notebook-lerma-stephanie-exam1",
+    "title": "Adrenal Gland Zones & Hormones NotebookLM (AP-19-J-08-01)",
+    "url": "https://notebook.google.com/notebook/c999ebfa-bc9c-420e-852d-dfde51380367",
+    "author": "Lerma, Stephanie",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Endocrine — Adrenal Hormones (AP-19-J-08-01)",
+    "description": "Describe location, histology, zones, and physiological functions of cortical/medullary adrenal hormones.",
+    "createdAt": "2026-09-05"
+  },
+  {
+    "id": "notebook-randle-jada-exam1",
+    "title": "Cardio: Heart Blood Flow Pathways NotebookLM (AP-19-L-03-02)",
+    "url": "https://notebook.google.com/notebook/6f962c26-26a8-46df-9eb6-8a686321de71",
+    "author": "Randle, Jada",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Cardio: Heart — Blood Flow Pathways (AP-19-L-03-02)",
+    "description": "Trace systemic, pulmonary, and coronary pathways of blood flow through specific chambers & valves.",
+    "createdAt": "2026-09-05"
+  },
+  {
+    "id": "notebook-sallam-noor-exam1",
+    "title": "Cardiac Output & Hemodynamics NotebookLM (AP-19-L-07-01)",
+    "url": "https://notebook.google.com/notebook/6e1d62d2-a482-4072-841a-4cdbbc6f2dda?authuser=1",
+    "author": "Sallam, Noor",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Cardio: Heart — Cardiac Output & Factors Affecting Preload/Afterload (AP-19-L-07-01)",
+    "description": "Define cardiac output, stroke volume, heart rate, and relate factors affecting preload/afterload.",
+    "createdAt": "2026-09-05"
+  },
+  {
+    "id": "notebook-lerma-stephanie-exam2",
+    "title": "Antibody Structure & Neutralization NotebookLM (AP-19-N-09-02)",
+    "url": "https://notebook.google.com/notebook/9d877068-5ab1-41bc-a753-d8d15f631031",
+    "author": "Lerma, Stephanie",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Immunity — Antibody Classes & Neutralization (AP-19-N-09-02)",
+    "description": "Contrast structures, classes (IgG, IgM, IgA, IgE, IgD) and neutralization mechanisms of antibodies.",
+    "createdAt": "2026-09-05"
+  },
+  {
+    "id": "notebook-randle-jada-exam2",
+    "title": "Respiratory CO2 Transport & Bicarbonate Buffer NotebookLM (AP-19-O-10-01)",
+    "url": "https://notebook.google.com/notebook/c412d07e-d67a-4629-9841-53a9a55bb2a3",
+    "author": "Randle, Jada",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Respiratory — CO2 Transport & Bicarbonate Buffer (AP-19-O-10-01)",
+    "description": "Describe carbaminohemoglobin and bicarbonate buffer mechanisms transporting CO2 in plasma.",
+    "createdAt": "2026-09-05"
+  }
+]
+
