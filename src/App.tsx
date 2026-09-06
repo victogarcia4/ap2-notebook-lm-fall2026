@@ -49,7 +49,7 @@ export default function App() {
           if (defaultMatch?.notebookLinks) {
             return {
               ...student,
-              notebookLinks: { ...defaultMatch.notebookLinks, ...student.notebookLinks }
+              notebookLinks: { ...student.notebookLinks, ...defaultMatch.notebookLinks }
             };
           }
           return student;

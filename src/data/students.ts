@@ -26,7 +26,21 @@ export const defaultStudents: Student[] = [
   { id: "7859714", name: "Flores Torres, William", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7881034", name: "Grant, Kmirrah", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7216988", name: "Harrison, Desmon", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
-  { id: "8076059", name: "Henegariu, Sarah", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "8076059", 
+    name: "Henegariu, Sarah", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/f0728237-7785-4f8b-9cc1-4c7490e2a0f2",
+      exam2: "https://notebook.google.com/notebook/f61f476e-50ae-4ba7-88a0-6d0d588959fc",
+      exam3: "https://notebook.google.com/notebook/f0d6337d-8730-4dc7-b69d-75279e228858",
+      exam4: "https://notebook.google.com/notebook/abb95f7d-895b-4297-bc86-b4d4711f7c4b",
+      exam5: "https://notebook.google.com/notebook/b9c0cbe4-e3c0-4919-9bd9-5bc069981465"
+    }
+  },
   { id: "7363842", name: "Ledesma, Debora", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { 
     id: "0690788", 
@@ -56,7 +70,18 @@ export const defaultStudents: Student[] = [
       exam2: "https://notebook.google.com/notebook/c412d07e-d67a-4629-9841-53a9a55bb2a3"
     }
   },
-  { id: "7780873", name: "Regalado, Keila", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "7780873", 
+    name: "Regalado, Keila", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/9df95331-507a-4314-a0c3-a3c7ba62eeca",
+      exam2: "https://notebook.google.com/notebook/ad80631f-7314-4927-aeef-400bcf429847"
+    }
+  },
   { 
     id: "7889050", 
     name: "Sallam, Noor", 

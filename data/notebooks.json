@@ -64,6 +64,83 @@
     "topic": "Respiratory — CO2 Transport & Bicarbonate Buffer (AP-19-O-10-01)",
     "description": "Describe carbaminohemoglobin and bicarbonate buffer mechanisms transporting CO2 in plasma.",
     "createdAt": "2026-09-05"
+  },
+  {
+    "id": "notebook-henegariu-sarah-exam1",
+    "title": "Water-Soluble vs Lipid-Soluble Hormone Action NotebookLM (AP-19-J-03-02)",
+    "url": "https://notebook.google.com/notebook/f0728237-7785-4f8b-9cc1-4c7490e2a0f2",
+    "author": "Henegariu, Sarah",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Endocrine — Hormone Action Mechanisms (AP-19-J-03-02)",
+    "description": "Describe mechanisms of action of water-soluble vs lipid-soluble hormones.",
+    "createdAt": "2026-09-06"
+  },
+  {
+    "id": "notebook-henegariu-sarah-exam2",
+    "title": "Innate Immunity & Inflammation Mechanisms NotebookLM (AP-19-N-04-02)",
+    "url": "https://notebook.google.com/notebook/f61f476e-50ae-4ba7-88a0-6d0d588959fc",
+    "author": "Henegariu, Sarah",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Immunity — Phagocytosis, NK Surveillance & Inflammation (AP-19-N-04-02)",
+    "description": "Describe mechanisms of phagocytosis, NK cell surveillance, fever induction, and chemical inflammation.",
+    "createdAt": "2026-09-06"
+  },
+  {
+    "id": "notebook-henegariu-sarah-exam3",
+    "title": "Accessory Biliary Pipeline & Liver Lobule Flow NotebookLM (AP-19-P-08-01)",
+    "url": "https://notebook.google.com/notebook/f0d6337d-8730-4dc7-b69d-75279e228858",
+    "author": "Henegariu, Sarah",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Digestive — Accessory Biliary Pipeline & Pancreatic Enzymes (AP-19-P-08-01)",
+    "description": "Explain the accessory biliary pipeline: liver lobule flow, gallbladder storage, and pancreatic enzymes.",
+    "createdAt": "2026-09-06"
+  },
+  {
+    "id": "notebook-henegariu-sarah-exam4",
+    "title": "Renal Filtration, Reabsorption & Secretion NotebookLM (AP-19-R-06-01)",
+    "url": "https://notebook.google.com/notebook/abb95f7d-895b-4297-bc86-b4d4711f7c4b",
+    "author": "Henegariu, Sarah",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Urinary — Glomerular Filtration & Tubular Mechanisms (AP-19-R-06-01)",
+    "description": "Define renal mechanisms: glomerular filtration, tubular reabsorption, and active secretion.",
+    "createdAt": "2026-09-06"
+  },
+  {
+    "id": "notebook-henegariu-sarah-exam5",
+    "title": "Female Reproductive Anatomy & Endometrium NotebookLM (AP-19-T-02-01)",
+    "url": "https://notebook.google.com/notebook/b9c0cbe4-e3c0-4919-9bd9-5bc069981465",
+    "author": "Henegariu, Sarah",
+    "role": "student",
+    "examId": "exam5",
+    "topic": "Reproduction — Ovaries, Uterus & Endometrium (AP-19-T-02-01)",
+    "description": "Describe ovaries, uterine tube, uterus structure, and histological layers of endometrium.",
+    "createdAt": "2026-09-06"
+  },
+  {
+    "id": "notebook-regalado-keila-exam1",
+    "title": "Cardiac Conduction System & Pacemaking NotebookLM (AP-19-L-05-01)",
+    "url": "https://notebook.google.com/notebook/9df95331-507a-4314-a0c3-a3c7ba62eeca",
+    "author": "Regalado, Keila",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Cardio: Heart — Intrinsic Conduction System & Pacemaking (AP-19-L-05-01)",
+    "description": "Identify components of the intrinsic cardiac conduction system and relate them to pacemaking.",
+    "createdAt": "2026-09-06"
+  },
+  {
+    "id": "notebook-regalado-keila-exam2",
+    "title": "Chemoreceptor Controls & Alveolar Ventilation NotebookLM (AP-19-O-11-01)",
+    "url": "https://notebook.google.com/notebook/ad80631f-7314-4927-aeef-400bcf429847",
+    "author": "Regalado, Keila",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Respiratory — Chemoreceptor Regulation of Ventilation (AP-19-O-11-01)",
+    "description": "Examine central/peripheral chemoreceptor controls regulating rate & depth of alveolar ventilation.",
+    "createdAt": "2026-09-06"
   }
 ]
 
