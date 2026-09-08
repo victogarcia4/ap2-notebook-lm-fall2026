@@ -16,7 +16,17 @@ export const defaultStudents: Student[] = [
       exam1: "https://notebook.google.com/notebook/ce9bb629-90bf-48e7-bf9d-545e57420ae6"
     }
   },
-  { id: "8082474", name: "Clark, Tiya", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "8082474", 
+    name: "Clark, Tiya", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/c39b2e9f-76b4-4c46-a328-3ef1987cb3c9"
+    }
+  },
   { id: "0609900", name: "Cooper, Kendra", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "8149636", name: "Dacus, Lynli", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "8128824", name: "Dismuke, Khadijah", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },

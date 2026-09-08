@@ -141,6 +141,17 @@
     "topic": "Respiratory — Chemoreceptor Regulation of Ventilation (AP-19-O-11-01)",
     "description": "Examine central/peripheral chemoreceptor controls regulating rate & depth of alveolar ventilation.",
     "createdAt": "2026-09-06"
+  },
+  {
+    "id": "notebook-clark-tiya-exam1",
+    "title": "Red Blood Cell Structure & Erythropoiesis NotebookLM (AP-19-K-03-01)",
+    "url": "https://notebook.google.com/notebook/c39b2e9f-76b4-4c46-a328-3ef1987cb3c9",
+    "author": "Clark, Tiya",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Blood — RBC Structure & Erythropoiesis (AP-19-K-03-01)",
+    "description": "Describe structure, function, and development (erythropoiesis) of mature red blood cells.",
+    "createdAt": "2026-09-08"
   }
 ]
 
