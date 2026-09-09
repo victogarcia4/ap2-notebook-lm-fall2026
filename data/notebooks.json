@@ -207,6 +207,17 @@
     "topic": "Reproduction — Spermatogenesis & Blood-Testis Barrier (AP-19-T-01-02)",
     "description": "Describe stages of spermatogenesis, meiosis, blood-testis barrier, and Sertoli/Leydig cell signals.",
     "createdAt": "2026-09-09"
+  },
+  {
+    "id": "notebook-flores-torres-william-exam1",
+    "title": "Hemodynamics, Blood Pressure & Resistance NotebookLM (AP-19-M-03-01)",
+    "url": "https://notebook.google.com/notebook/eed4ceb6-759f-4c69-ba2f-84714681db1c",
+    "author": "Flores Torres, William",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Cardio: Vessels — Fluid Mechanics & Vascular Resistance (AP-19-M-03-01)",
+    "description": "Explain fluid mechanics of blood flow, blood pressure gradient, and peripheral vascular resistance.",
+    "createdAt": "2026-09-09"
   }
 ]
 

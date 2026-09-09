@@ -33,7 +33,17 @@ export const defaultStudents: Student[] = [
   { id: "7320979", name: "Eguia, Chris", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7735358", name: "Escamilla, Desteny", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7768690", name: "Flores, Jaqueline", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
-  { id: "7859714", name: "Flores Torres, William", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "7859714", 
+    name: "Flores Torres, William", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/eed4ceb6-759f-4c69-ba2f-84714681db1c"
+    }
+  },
   { id: "7881034", name: "Grant, Kmirrah", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7216988", name: "Harrison, Desmon", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { 
