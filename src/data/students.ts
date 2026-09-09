@@ -105,6 +105,20 @@ export const defaultStudents: Student[] = [
   },
   { id: "7917578", name: "Seda Sepulveda, Isaias", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "0968016", name: "Turner, Erica", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
-  { id: "7772381", name: "Vang, Chee", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "7772381", 
+    name: "Vang, Chee", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/7d22f965-4c4e-4e43-a7bc-2bc0bdbb0edd",
+      exam2: "https://notebook.google.com/notebook/88ea617b-da55-41e2-867f-6e79adc7b0fe",
+      exam3: "https://notebook.google.com/notebook/95548b2f-1949-4a04-bd43-8388b4196925",
+      exam4: "https://notebook.google.com/notebook/e62ba352-bfc5-4b82-a600-bd1a9141ce35",
+      exam5: "https://notebook.google.com/notebook/539fd813-8504-456c-bdaa-2d3ce4055310"
+    }
+  },
   { id: "7991244", name: "Wilson, Erin", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" }
 ];

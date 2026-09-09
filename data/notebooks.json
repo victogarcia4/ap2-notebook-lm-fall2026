@@ -152,6 +152,61 @@
     "topic": "Blood — RBC Structure & Erythropoiesis (AP-19-K-03-01)",
     "description": "Describe structure, function, and development (erythropoiesis) of mature red blood cells.",
     "createdAt": "2026-09-08"
+  },
+  {
+    "id": "notebook-vang-chee-exam1",
+    "title": "Baroreceptor & Chemoreceptor Reflex Pathways NotebookLM (AP-19-M-04-01)",
+    "url": "https://notebook.google.com/notebook/7d22f965-4c4e-4e43-a7bc-2bc0bdbb0edd",
+    "author": "Vang, Chee",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Cardio: Vessels — Baroreceptor & Chemoreceptor Reflexes (AP-19-M-04-01)",
+    "description": "Describe baroreceptor and chemoreceptor reflex pathways regulating systemic blood pressure.",
+    "createdAt": "2026-09-09"
+  },
+  {
+    "id": "notebook-vang-chee-exam2",
+    "title": "Innate Immunity & Inflammation Mechanisms NotebookLM (AP-19-N-04-02)",
+    "url": "https://notebook.google.com/notebook/88ea617b-da55-41e2-867f-6e79adc7b0fe",
+    "author": "Vang, Chee",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Immunity — Phagocytosis, NK Surveillance & Inflammation (AP-19-N-04-02)",
+    "description": "Describe mechanisms of phagocytosis, NK cell surveillance, fever induction, and chemical inflammation.",
+    "createdAt": "2026-09-09"
+  },
+  {
+    "id": "notebook-vang-chee-exam3",
+    "title": "Accessory Biliary Pipeline & Pancreatic Enzymes NotebookLM (AP-19-P-08-01)",
+    "url": "https://notebook.google.com/notebook/95548b2f-1949-4a04-bd43-8388b4196925",
+    "author": "Vang, Chee",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Digestive — Accessory Biliary Pipeline & Pancreatic Enzymes (AP-19-P-08-01)",
+    "description": "Explain the accessory biliary pipeline: liver lobule flow, gallbladder storage, and pancreatic enzymes.",
+    "createdAt": "2026-09-09"
+  },
+  {
+    "id": "notebook-vang-chee-exam4",
+    "title": "Cortical vs Juxtamedullary Nephrons Microvascular Loops NotebookLM (AP-19-R-05-01)",
+    "url": "https://notebook.google.com/notebook/e62ba352-bfc5-4b82-a600-bd1a9141ce35",
+    "author": "Vang, Chee",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Urinary — Cortical vs Juxtamedullary Nephrons (AP-19-R-05-01)",
+    "description": "Contrast structure and local microvascular loops of cortical vs juxtamedullary nephrons.",
+    "createdAt": "2026-09-09"
+  },
+  {
+    "id": "notebook-vang-chee-exam5",
+    "title": "Spermatogenesis, Meiosis & Blood-Testis Barrier NotebookLM (AP-19-T-01-02)",
+    "url": "https://notebook.google.com/notebook/539fd813-8504-456c-bdaa-2d3ce4055310",
+    "author": "Vang, Chee",
+    "role": "student",
+    "examId": "exam5",
+    "topic": "Reproduction — Spermatogenesis & Blood-Testis Barrier (AP-19-T-01-02)",
+    "description": "Describe stages of spermatogenesis, meiosis, blood-testis barrier, and Sertoli/Leydig cell signals.",
+    "createdAt": "2026-09-09"
   }
 ]
 
