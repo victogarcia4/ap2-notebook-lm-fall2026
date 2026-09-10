@@ -17,20 +17,64 @@ const EXAM_ORDER: Record<string, number> = {
 
 // ─── GitHub helpers ──────────────────────────────────────────────────────────
 
+/** Check if GITHUB_TOKEN is a real token and not a placeholder or empty */
+function isValidGitHubToken(token?: string): boolean {
+  if (!token) return false;
+  const trimmed = token.trim();
+  if (
+    trimmed === '' ||
+    trimmed.includes('your_token') ||
+    trimmed.includes('your_github_token') ||
+    trimmed.includes('placeholder') ||
+    trimmed.length < 20
+  ) {
+    return false;
+  }
+  return true;
+}
+
 /** Fetch the current notebooks.json file content + SHA from GitHub. */
 async function getFileFromGitHub(): Promise<{ content: any[]; sha: string | null }> {
-  const res = await fetch(
+  const headers: Record<string, string> = {
+    Accept: 'application/vnd.github.v3+json',
+    'User-Agent': 'AP2-NotebookLM-App',
+  };
+
+  if (isValidGitHubToken(GITHUB_TOKEN)) {
+    headers.Authorization = `Bearer ${GITHUB_TOKEN!.trim()}`;
+  }
+
+  let res = await fetch(
     `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}?ref=${BRANCH}`,
-    {
-      headers: {
-        Authorization: `Bearer ${GITHUB_TOKEN}`,
-        Accept: 'application/vnd.github.v3+json',
-      },
-    },
+    { headers },
   );
 
+  // If token is rejected with 401 Unauthorized, retry as unauthenticated public request
+  if (res.status === 401 && headers.Authorization) {
+    delete headers.Authorization;
+    res = await fetch(
+      `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}?ref=${BRANCH}`,
+      { headers },
+    );
+  }
+
   if (res.status === 404) return { content: [], sha: null };
-  if (!res.ok) throw new Error(`GitHub GET error ${res.status}: ${await res.text()}`);
+
+  if (!res.ok) {
+    // If GitHub API is rate-limited or fails, try raw github content for public repository
+    try {
+      const rawRes = await fetch(
+        `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}/${FILE_PATH}`,
+      );
+      if (rawRes.ok) {
+        const rawJson = await rawRes.json();
+        return { content: Array.isArray(rawJson) ? rawJson : [], sha: null };
+      }
+    } catch {
+      // ignore
+    }
+    throw new Error(`GitHub GET error ${res.status}`);
+  }
 
   const data = await res.json();
   const decoded = Buffer.from(data.content, 'base64').toString('utf-8');
@@ -106,25 +150,20 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     // ── GET: public read ──────────────────────────────────────────────────
     if (req.method === 'GET') {
-      if (GITHUB_TOKEN) {
-        try {
-          const { content } = await getFileFromGitHub();
-          const localContent = await getLocalFile();
-          const merged = Array.isArray(content) ? [...content] : [];
-          for (const item of localContent) {
-            if (!merged.some(m => m.id === item.id || m.url === item.url)) {
-              merged.push(item);
-            }
-          }
-          return res.status(200).json(merged);
-        } catch (ghErr) {
-          console.warn('[api/notebooks] GitHub fetch failed, reading local file:', ghErr);
-          const localContent = await getLocalFile();
-          return res.status(200).json(localContent);
-        }
-      }
       const localContent = await getLocalFile();
-      return res.status(200).json(localContent);
+      try {
+        const { content } = await getFileFromGitHub();
+        const merged = Array.isArray(content) ? [...content] : [];
+        for (const item of localContent) {
+          if (!merged.some(m => m.id === item.id || (m.url && item.url && m.url === item.url))) {
+            merged.push(item);
+          }
+        }
+        return res.status(200).json(merged.length > 0 ? merged : localContent);
+      } catch {
+        // Fallback silently to local content if remote fetch is unreachable
+        return res.status(200).json(localContent);
+      }
     }
 
     // ── POST: admin-only write ────────────────────────────────────────────
@@ -153,7 +192,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         // Organize: sort by exam, then author
         const organized = organizeNotebooks(notebooks);
 
-        if (GITHUB_TOKEN) {
+        if (isValidGitHubToken(GITHUB_TOKEN)) {
           try {
             // Get current SHA for update
             const { sha } = await getFileFromGitHub();
@@ -177,7 +216,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
               count: organized.length,
             });
           } catch (ghErr: any) {
-            console.warn('[api/notebooks] GitHub commit failed, saving locally:', ghErr.message);
+            console.warn('[api/notebooks] GitHub commit failed, saving locally:', ghErr?.message || ghErr);
             await saveLocalFile(organized);
             return res.status(200).json({
               success: true,
@@ -187,7 +226,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           }
         }
 
-        // If no GITHUB_TOKEN configured, save locally
+        // If no valid GITHUB_TOKEN configured, save locally
         await saveLocalFile(organized);
         return res.status(200).json({
           success: true,
