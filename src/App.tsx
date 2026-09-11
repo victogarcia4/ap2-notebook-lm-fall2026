@@ -37,6 +37,17 @@ export default function App() {
     if (saved) {
       try {
         const savedRoster = JSON.parse(saved) as Student[];
+
+        // Handle roster updates: replace Dismuke, Khadijah (8128824) with Boykin, Kalynn (7377841)
+        const dismukeIdx = savedRoster.findIndex(student => student.id === "8128824");
+        const kalynn = defaultStudents.find(student => student.id === "7377841");
+        if (dismukeIdx !== -1 && kalynn) {
+          savedRoster[dismukeIdx] = { ...kalynn };
+        } else if (kalynn && !savedRoster.some(student => student.id === kalynn.id)) {
+          const boykinIdx = defaultStudents.findIndex(student => student.id === kalynn.id);
+          savedRoster.splice(boykinIdx > 0 ? boykinIdx : 8, 0, { ...kalynn });
+        }
+
         const melissa = defaultStudents.find(student => student.id === "7311968");
 
         if (melissa && !savedRoster.some(student => student.id === melissa.id)) {

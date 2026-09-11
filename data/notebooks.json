@@ -218,6 +218,17 @@
     "topic": "Cardio: Vessels — Fluid Mechanics & Vascular Resistance (AP-19-M-03-01)",
     "description": "Explain fluid mechanics of blood flow, blood pressure gradient, and peripheral vascular resistance.",
     "createdAt": "2026-09-09"
+  },
+  {
+    "id": "notebook-ledesma-debora-exam1",
+    "title": "Pituitary Hormones & Physiological Impact NotebookLM (AP-19-J-05-02)",
+    "url": "https://notebook.google.com/notebook/a27e856b-8195-4430-8273-34820328b2f7",
+    "author": "Ledesma, Debora",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Endocrine — Pituitary Hormones & Target Organs (AP-19-J-05-02)",
+    "description": "List pituitary hormones (anterior/posterior) and summarize their target organs and physiological impact.",
+    "createdAt": "2026-09-10"
   }
 ]
 

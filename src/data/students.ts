@@ -29,7 +29,7 @@ export const defaultStudents: Student[] = [
   },
   { id: "0609900", name: "Cooper, Kendra", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "8149636", name: "Dacus, Lynli", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
-  { id: "8128824", name: "Dismuke, Khadijah", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { id: "7377841", name: "Boykin, Kalynn", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7320979", name: "Eguia, Chris", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7735358", name: "Escamilla, Desteny", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7768690", name: "Flores, Jaqueline", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
@@ -61,7 +61,17 @@ export const defaultStudents: Student[] = [
       exam5: "https://notebook.google.com/notebook/b9c0cbe4-e3c0-4919-9bd9-5bc069981465"
     }
   },
-  { id: "7363842", name: "Ledesma, Debora", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "7363842", 
+    name: "Ledesma, Debora", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/a27e856b-8195-4430-8273-34820328b2f7"
+    }
+  },
   { 
     id: "0690788", 
     name: "Lerma, Stephanie", 
