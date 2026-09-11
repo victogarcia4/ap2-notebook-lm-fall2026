@@ -229,6 +229,17 @@
     "topic": "Endocrine — Pituitary Hormones & Target Organs (AP-19-J-05-02)",
     "description": "List pituitary hormones (anterior/posterior) and summarize their target organs and physiological impact.",
     "createdAt": "2026-09-10"
+  },
+  {
+    "id": "notebook-lopez-jesus-exam1",
+    "title": "Blood Functions & Physiological Ranges NotebookLM (AP-19-K-01-01)",
+    "url": "https://notebook.google.com/notebook/7061d188-0d78-49be-89e4-037461603994",
+    "author": "Lopez, Jesus",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Blood — General Functions & Physiological Ranges (AP-19-K-01-01)",
+    "description": "List the general functions of blood (transport, regulation, protection) and physiological ranges.",
+    "createdAt": "2026-09-10"
   }
 ]
 
