@@ -240,6 +240,28 @@
     "topic": "Blood — General Functions & Physiological Ranges (AP-19-K-01-01)",
     "description": "List the general functions of blood (transport, regulation, protection) and physiological ranges.",
     "createdAt": "2026-09-10"
+  },
+  {
+    "id": "notebook-lopez-jesus-exam3",
+    "title": "Cellular Metabolism: Anabolism vs Catabolism NotebookLM (AP-19-Q-01-01)",
+    "url": "https://notebook.google.com/notebook/db5e36bb-1628-4d85-bf6c-db2fd8775085",
+    "author": "Lopez, Jesus",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Metabolism — Energetics: Anabolism vs Catabolism (AP-19-Q-01-01)",
+    "description": "Define cellular metabolism, contrasting energetic requirements of anabolism vs catabolic pathways.",
+    "createdAt": "2026-09-12"
+  },
+  {
+    "id": "notebook-lopez-jesus-exam2",
+    "title": "Respiratory Passages to Terminal Bronchials NotebookLM (AP-19-O-01-01)",
+    "url": "https://notebook.google.com/notebook/ec5980e4-e947-409e-95c6-d023b9908d78",
+    "author": "Lopez, Jesus",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Respiratory — Upper to Lower Structural Airway Pathways (AP-19-O-01-01)",
+    "description": "Describe structural pathways from nasal passages down to standard terminal bronchial segments.",
+    "createdAt": "2026-09-12"
   }
 ]
 

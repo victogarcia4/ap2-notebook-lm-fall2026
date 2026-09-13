@@ -92,7 +92,9 @@ export const defaultStudents: Student[] = [
     plan: "Associate Degree - Associate of Science (AS)", 
     level: "Freshman",
     notebookLinks: {
-      exam1: "https://notebook.google.com/notebook/7061d188-0d78-49be-89e4-037461603994"
+      exam1: "https://notebook.google.com/notebook/7061d188-0d78-49be-89e4-037461603994",
+      exam2: "https://notebook.google.com/notebook/ec5980e4-e947-409e-95c6-d023b9908d78",
+      exam3: "https://notebook.google.com/notebook/db5e36bb-1628-4d85-bf6c-db2fd8775085"
     }
   },
   { id: "8084556", name: "Mcgruder, Chelsea", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
