@@ -131,8 +131,14 @@ export const defaultStudents: Student[] = [
     units: "4.00", 
     plan: "Associate Degree - Associate of Science (AS)", 
     level: "Freshman",
+    exam1: {
+      id: "AP-19-J-01-01",
+      chap: "13",
+      topic: "Endocrine",
+      desc: "Describe the general functions of the endocrine system and relate it to communication speed."
+    },
     notebookLinks: {
-      exam1: "https://notebook.google.com/notebook/6e1d62d2-a482-4072-841a-4cdbbc6f2dda?authuser=1"
+      exam1: "https://notebook.google.com/notebook/31d97b16-fb41-48af-91e4-102423fda3d3"
     }
   },
   { id: "7917578", name: "Seda Sepulveda, Isaias", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },

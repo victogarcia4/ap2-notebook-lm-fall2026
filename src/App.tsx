@@ -57,10 +57,15 @@ export default function App() {
 
         const mergedRoster = savedRoster.map(student => {
           const defaultMatch = defaultStudents.find(ds => ds.id === student.id);
-          if (defaultMatch?.notebookLinks) {
+          if (defaultMatch) {
             return {
               ...student,
-              notebookLinks: { ...student.notebookLinks, ...defaultMatch.notebookLinks }
+              notebookLinks: { ...student.notebookLinks, ...defaultMatch.notebookLinks },
+              ...(defaultMatch.exam1 ? { exam1: defaultMatch.exam1 } : {}),
+              ...(defaultMatch.exam2 ? { exam2: defaultMatch.exam2 } : {}),
+              ...(defaultMatch.exam3 ? { exam3: defaultMatch.exam3 } : {}),
+              ...(defaultMatch.exam4 ? { exam4: defaultMatch.exam4 } : {}),
+              ...(defaultMatch.exam5 ? { exam5: defaultMatch.exam5 } : {})
             };
           }
           return student;
@@ -97,6 +102,11 @@ export default function App() {
     (['exam1', 'exam2', 'exam3', 'exam4', 'exam5'] as const).forEach(examKey => {
       const outcomes = hapsOutcomes[examKey] || [];
       studentList.forEach((student, index) => {
+        const defaultMatch = defaultStudents.find(ds => ds.id === student.id);
+        if (defaultMatch && defaultMatch[examKey]) {
+          student[examKey] = defaultMatch[examKey];
+          return;
+        }
         if (outcomes.length > 0) {
           student[examKey] = outcomes[index % outcomes.length];
         }

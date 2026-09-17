@@ -153,12 +153,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const localContent = await getLocalFile();
       try {
         const { content } = await getFileFromGitHub();
-        const merged = Array.isArray(content) ? [...content] : [];
-        for (const item of localContent) {
-          if (!merged.some(m => m.id === item.id || (m.url && item.url && m.url === item.url))) {
-            merged.push(item);
+        const itemMap = new Map<string, any>();
+        if (Array.isArray(content)) {
+          for (const item of content) {
+            if (item.id) itemMap.set(item.id, item);
           }
         }
+        for (const item of localContent) {
+          if (item.id) itemMap.set(item.id, item);
+        }
+        const merged = Array.from(itemMap.values());
         return res.status(200).json(merged.length > 0 ? merged : localContent);
       } catch {
         // Fallback silently to local content if remote fetch is unreachable
