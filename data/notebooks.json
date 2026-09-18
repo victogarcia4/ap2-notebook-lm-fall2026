@@ -262,6 +262,17 @@
     "topic": "Respiratory — Upper to Lower Structural Airway Pathways (AP-19-O-01-01)",
     "description": "Describe structural pathways from nasal passages down to standard terminal bronchial segments.",
     "createdAt": "2026-09-12"
+  },
+  {
+    "id": "notebook-orosco-jose-exam1",
+    "title": "Blood Type Compatibility & Transfusion Reactions NotebookLM (AP-19-K-07-01)",
+    "url": "https://notebook.google.com/notebook/5d0c22fa-3985-4a8c-8e7c-ac74656ddfab",
+    "author": "Orosco, Jose",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Blood — Blood Type Compatibility & Transfusions (AP-19-K-07-01)",
+    "description": "Predict which blood types are compatible and what happens when the incorrect ABO or Rh blood type is transfused.",
+    "createdAt": "2026-09-17"
   }
 ]
 

@@ -99,7 +99,17 @@ export const defaultStudents: Student[] = [
   },
   { id: "8084556", name: "Mcgruder, Chelsea", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7946077", name: "Nguyen, Hoang", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
-  { id: "7857719", name: "Orosco, Jose", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "7857719", 
+    name: "Orosco, Jose", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/5d0c22fa-3985-4a8c-8e7c-ac74656ddfab"
+    }
+  },
   { 
     id: "7599201", 
     name: "Randle, Jada", 
