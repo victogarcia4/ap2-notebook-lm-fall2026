@@ -13,7 +13,9 @@ export const defaultStudents: Student[] = [
     plan: "Associate Degree - Associate of Science (AS)", 
     level: "Freshman",
     notebookLinks: {
-      exam1: "https://notebook.google.com/notebook/ce9bb629-90bf-48e7-bf9d-545e57420ae6"
+      exam1: "https://notebook.google.com/notebook/ce9bb629-90bf-48e7-bf9d-545e57420ae6",
+      exam2: "https://notebook.google.com/notebook/79da7f69-ffa8-4710-b624-87c17f90717e",
+      exam3: "https://notebook.google.com/notebook/108b394f-ae66-4175-9b15-a2a014a0c8b7?authuser=1"
     }
   },
   { 
@@ -31,7 +33,23 @@ export const defaultStudents: Student[] = [
   { id: "8149636", name: "Dacus, Lynli", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7377841", name: "Boykin, Kalynn", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7320979", name: "Eguia, Chris", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
-  { id: "7735358", name: "Escamilla, Desteny", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "7735358", 
+    name: "Escamilla, Desteny", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    exam1: {
+      id: "AP-19-J-01-01",
+      chap: "13",
+      topic: "Endocrine",
+      desc: "Describe the general functions of the endocrine system and relate it to communication speed."
+    },
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/93f3d840-015f-43a0-b874-903f109e95d8"
+    }
+  },
   { id: "7768690", name: "Flores, Jaqueline", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { 
     id: "7859714", 
@@ -94,7 +112,8 @@ export const defaultStudents: Student[] = [
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/7061d188-0d78-49be-89e4-037461603994",
       exam2: "https://notebook.google.com/notebook/ec5980e4-e947-409e-95c6-d023b9908d78",
-      exam3: "https://notebook.google.com/notebook/db5e36bb-1628-4d85-bf6c-db2fd8775085"
+      exam3: "https://notebook.google.com/notebook/db5e36bb-1628-4d85-bf6c-db2fd8775085",
+      exam5: "https://notebook.google.com/notebook/fc604dc6-06b7-4c63-bbfc-dee672b05ede"
     }
   },
   { id: "8084556", name: "Mcgruder, Chelsea", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },

@@ -273,6 +273,50 @@
     "topic": "Blood — Blood Type Compatibility & Transfusions (AP-19-K-07-01)",
     "description": "Predict which blood types are compatible and what happens when the incorrect ABO or Rh blood type is transfused.",
     "createdAt": "2026-09-17"
+  },
+  {
+    "id": "notebook-escamilla-desteny-exam1",
+    "title": "Endocrine Functions & Communication Speed NotebookLM (AP-19-J-01-01)",
+    "url": "https://notebook.google.com/notebook/93f3d840-015f-43a0-b874-903f109e95d8",
+    "author": "Escamilla, Desteny",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Endocrine — General Functions & Communication Speed (AP-19-J-01-01)",
+    "description": "Describe the general functions of the endocrine system and relate it to communication speed.",
+    "createdAt": "2026-09-18"
+  },
+  {
+    "id": "notebook-bell-charlie-exam2",
+    "title": "Cell-Mediated Immunity & T Cell Activation NotebookLM (AP-19-N-08-01)",
+    "url": "https://notebook.google.com/notebook/79da7f69-ffa8-4710-b624-87c17f90717e",
+    "author": "Bell, Charlie",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Immunity — Cell-Mediated Activation & MHC Pathways (AP-19-N-08-01)",
+    "description": "Describe cell-mediated activation pathways involving MHC-I/II proteins, Helper & Cytotoxic T cells.",
+    "createdAt": "2026-09-18"
+  },
+  {
+    "id": "notebook-bell-charlie-exam3",
+    "title": "Chemical Digestion & Nutrient Absorption NotebookLM (AP-19-P-09-01)",
+    "url": "https://notebook.google.com/notebook/108b394f-ae66-4175-9b15-a2a014a0c8b7?authuser=1",
+    "author": "Bell, Charlie",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Digestive — Chemical Breakdown & Absorption of Carbs/Proteins (AP-19-P-09-01)",
+    "description": "Trace chemical breakdown and standard symport/facilitated absorption of carbohydrates and proteins.",
+    "createdAt": "2026-09-18"
+  },
+  {
+    "id": "notebook-lopez-jesus-exam5",
+    "title": "Gastrulation & Primitive Streak Formation NotebookLM (AP-19-T-03-01)",
+    "url": "https://notebook.google.com/notebook/fc604dc6-06b7-4c63-bbfc-dee672b05ede",
+    "author": "Lopez, Jesus",
+    "role": "student",
+    "examId": "exam5",
+    "topic": "Development — Gastrulation & Primitive Streak (AP-19-T-03-01)",
+    "description": "Define gastrulation timeline and structural formation of primitive streak, node, and blastopore.",
+    "createdAt": "2026-09-18"
   }
 ]
 
