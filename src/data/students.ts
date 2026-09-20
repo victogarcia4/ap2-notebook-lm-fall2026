@@ -15,7 +15,9 @@ export const defaultStudents: Student[] = [
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/ce9bb629-90bf-48e7-bf9d-545e57420ae6",
       exam2: "https://notebook.google.com/notebook/79da7f69-ffa8-4710-b624-87c17f90717e",
-      exam3: "https://notebook.google.com/notebook/108b394f-ae66-4175-9b15-a2a014a0c8b7?authuser=1"
+      exam3: "https://notebook.google.com/notebook/108b394f-ae66-4175-9b15-a2a014a0c8b7?authuser=1",
+      exam4: "https://notebook.google.com/notebook/5b3d83fd-bdef-46c9-a8a6-b64f45e6d3a9?authuser=1",
+      exam5: "https://notebook.google.com/notebook/b42e7747-e3ad-48a8-a6b9-f284e6d65100"
     }
   },
   { 
@@ -171,7 +173,23 @@ export const defaultStudents: Student[] = [
     }
   },
   { id: "7917578", name: "Seda Sepulveda, Isaias", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
-  { id: "0968016", name: "Turner, Erica", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "0968016", 
+    name: "Turner, Erica", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    exam1: {
+      id: "AP-19-M-03-01",
+      chap: "15",
+      topic: "Cardio: Vessels",
+      desc: "Explain fluid mechanics of blood flow, blood pressure gradient, and peripheral vascular resistance."
+    },
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/30c695e5-067a-46c9-8692-871a1e9ae9d7"
+    }
+  },
   { 
     id: "7772381", 
     name: "Vang, Chee", 

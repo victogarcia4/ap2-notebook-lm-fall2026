@@ -317,6 +317,39 @@
     "topic": "Development — Gastrulation & Primitive Streak (AP-19-T-03-01)",
     "description": "Define gastrulation timeline and structural formation of primitive streak, node, and blastopore.",
     "createdAt": "2026-09-18"
+  },
+  {
+    "id": "notebook-turner-erica-exam1",
+    "title": "Hemodynamics, Blood Pressure & Resistance NotebookLM (AP-19-M-03-01)",
+    "url": "https://notebook.google.com/notebook/30c695e5-067a-46c9-8692-871a1e9ae9d7",
+    "author": "Turner, Erica",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Cardio: Vessels — Fluid Mechanics & Vascular Resistance (AP-19-M-03-01)",
+    "description": "Explain fluid mechanics of blood flow, blood pressure gradient, and peripheral vascular resistance.",
+    "createdAt": "2026-09-20"
+  },
+  {
+    "id": "notebook-bell-charlie-exam4",
+    "title": "Nephron Active Transport & Osmolarity Changes NotebookLM (AP-19-R-08-01)",
+    "url": "https://notebook.google.com/notebook/5b3d83fd-bdef-46c9-a8a6-b64f45e6d3a9?authuser=1",
+    "author": "Bell, Charlie",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Urinary — Active Transport & Osmolarity in Nephron Segments (AP-19-R-08-01)",
+    "description": "Describe active transport and osmolarity changes in PCT, thin/thick limbs of Loop of Henle, and DCT.",
+    "createdAt": "2026-09-20"
+  },
+  {
+    "id": "notebook-bell-charlie-exam5",
+    "title": "Ovarian & Uterine Cycle Hormonal Correlation NotebookLM (AP-19-T-02-03)",
+    "url": "https://notebook.google.com/notebook/b42e7747-e3ad-48a8-a6b9-f284e6d65100",
+    "author": "Bell, Charlie",
+    "role": "student",
+    "examId": "exam5",
+    "topic": "Reproduction — Ovarian & Uterine Cycle Synchrony (AP-19-T-02-03)",
+    "description": "Correlate ovarian cycle changes (follicular, luteal) with uterine cycle (menstrual, secretory) under LH/FSH.",
+    "createdAt": "2026-09-20"
   }
 ]
 
