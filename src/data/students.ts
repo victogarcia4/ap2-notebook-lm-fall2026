@@ -32,7 +32,23 @@ export const defaultStudents: Student[] = [
     }
   },
   { id: "0609900", name: "Cooper, Kendra", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
-  { id: "8149636", name: "Dacus, Lynli", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "8149636", 
+    name: "Dacus, Lynli", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    exam1: {
+      id: "AP-19-J-01-01",
+      chap: "13",
+      topic: "Endocrine",
+      desc: "Describe the general functions of the endocrine system and relate it to communication speed."
+    },
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/632a7938-db20-4217-a082-11d9cf7bff0e"
+    }
+  },
   { id: "7377841", name: "Boykin, Kalynn", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { id: "7320979", name: "Eguia, Chris", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { 

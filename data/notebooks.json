@@ -350,6 +350,17 @@
     "topic": "Reproduction — Ovarian & Uterine Cycle Synchrony (AP-19-T-02-03)",
     "description": "Correlate ovarian cycle changes (follicular, luteal) with uterine cycle (menstrual, secretory) under LH/FSH.",
     "createdAt": "2026-09-20"
+  },
+  {
+    "id": "notebook-dacus-lynli-exam1",
+    "title": "Endocrine Functions & Communication Speed NotebookLM (AP-19-J-01-01)",
+    "url": "https://notebook.google.com/notebook/632a7938-db20-4217-a082-11d9cf7bff0e",
+    "author": "Dacus, Lynli",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Endocrine — General Functions & Communication Speed (AP-19-J-01-01)",
+    "description": "Describe the general functions of the endocrine system and relate it to communication speed.",
+    "createdAt": "2026-09-20"
   }
 ]
 
