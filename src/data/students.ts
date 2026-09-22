@@ -3,7 +3,23 @@ import { Student } from '../types';
 export const defaultStudents: Student[] = [
   { id: "INSTRUCTOR", name: "Garcia M, Victor", gradeBasis: "Graded", units: "4.00", plan: "Faculty / Course Coordinator", level: "Instructor" },
   { id: "7998227", name: "Alejandre, Barbara", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
-  { id: "8086296", name: "Arzola Garza, Maria", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "8086296", 
+    name: "Arzola Garza, Maria", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    exam1: {
+      id: "AP-19-J-05-02",
+      chap: "13",
+      topic: "Endocrine",
+      desc: "List pituitary hormones (anterior/posterior) and summarize their target organs and physiological impact."
+    },
+    notebookLinks: {
+      exam1: "https://notebook.google.com/notebook/58f78b2f-cd1a-4651-802a-525afa4020f8"
+    }
+  },
   { id: "1065979", name: "Banks, Quiandria", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { 
     id: "7893493", 

@@ -361,6 +361,17 @@
     "topic": "Endocrine — General Functions & Communication Speed (AP-19-J-01-01)",
     "description": "Describe the general functions of the endocrine system and relate it to communication speed.",
     "createdAt": "2026-09-20"
+  },
+  {
+    "id": "notebook-arzola-garza-maria-exam1",
+    "title": "Pituitary Hormones & Physiological Impact NotebookLM (AP-19-J-05-02)",
+    "url": "https://notebook.google.com/notebook/58f78b2f-cd1a-4651-802a-525afa4020f8",
+    "author": "Arzola Garza, Maria",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Endocrine — Pituitary Hormones & Target Organs (AP-19-J-05-02)",
+    "description": "List pituitary hormones (anterior/posterior) and summarize their target organs and physiological impact.",
+    "createdAt": "2026-09-22"
   }
 ]
 
