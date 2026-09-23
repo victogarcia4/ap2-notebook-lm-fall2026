@@ -92,8 +92,21 @@ export const defaultStudents: Student[] = [
     units: "4.00", 
     plan: "Associate Degree - Associate of Science (AS)", 
     level: "Freshman",
+    exam1: {
+      id: "AP-19-M-03-01",
+      chap: "15",
+      topic: "Cardio: Vessels",
+      desc: "Explain fluid mechanics of blood flow, blood pressure gradient, and peripheral vascular resistance."
+    },
+    exam2: {
+      id: "AP-19-N-01-01",
+      chap: "16",
+      topic: "Lymphatic",
+      desc: "Describe the structural outline, drainage, and volume-clearing role of the lymphatic system."
+    },
     notebookLinks: {
-      exam1: "https://notebook.google.com/notebook/eed4ceb6-759f-4c69-ba2f-84714681db1c"
+      exam1: "https://notebook.google.com/notebook/eed4ceb6-759f-4c69-ba2f-84714681db1c",
+      exam2: "https://notebook.google.com/notebook/a713e465-42f3-45e7-a18a-40765351a66a"
     }
   },
   { id: "7881034", name: "Grant, Kmirrah", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
