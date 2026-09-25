@@ -23,6 +23,13 @@ export interface Student {
   exam4?: LearningOutcome;
   exam5?: LearningOutcome;
   notebookLinks?: Partial<Record<'exam1' | 'exam2' | 'exam3' | 'exam4' | 'exam5', string>>;
+  gameLinks?: Partial<Record<'exam1' | 'exam2' | 'exam3' | 'exam4' | 'exam5', { title: string; url: string }>>;
+  extraCredit?: {
+    title: string;
+    url: string;
+    topic: string;
+    examId: 'exam1' | 'exam2' | 'exam3' | 'exam4' | 'exam5';
+  };
 }
 
 export interface SubmittedNotebook {

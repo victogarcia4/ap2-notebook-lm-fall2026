@@ -61,6 +61,8 @@ export default function App() {
             return {
               ...student,
               notebookLinks: { ...student.notebookLinks, ...defaultMatch.notebookLinks },
+              gameLinks: { ...student.gameLinks, ...defaultMatch.gameLinks },
+              ...(defaultMatch.extraCredit ? { extraCredit: defaultMatch.extraCredit } : {}),
               ...(defaultMatch.exam1 ? { exam1: defaultMatch.exam1 } : {}),
               ...(defaultMatch.exam2 ? { exam2: defaultMatch.exam2 } : {}),
               ...(defaultMatch.exam3 ? { exam3: defaultMatch.exam3 } : {}),
@@ -178,11 +180,12 @@ export default function App() {
 * **Level:** ${student.level}
 
 ## Assigned HAPS Learning Outcomes
-1. **Lecture Exam 1 (Ch. 13-15):** \`${student.exam1?.id || ""}\` - ${student.exam1?.topic || ""}: ${student.exam1?.desc || ""}${student.notebookLinks?.exam1 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam1}` : ''}
-2. **Lecture Exam 2 (Ch. 16, 19):** \`${student.exam2?.id || ""}\` - ${student.exam2?.topic || ""}: ${student.exam2?.desc || ""}${student.notebookLinks?.exam2 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam2}` : ''}
-3. **Lecture Exam 3 (Ch. 17-18):** \`${student.exam3?.id || ""}\` - ${student.exam3?.topic || ""}: ${student.exam3?.desc || ""}${student.notebookLinks?.exam3 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam3}` : ''}
-4. **Lecture Exam 4 (Ch. 20-21):** \`${student.exam4?.id || ""}\` - ${student.exam4?.topic || ""}: ${student.exam4?.desc || ""}${student.notebookLinks?.exam4 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam4}` : ''}
-5. **Lecture Exam 5 (Ch. 22-24):** \`${student.exam5?.id || ""}\` - ${student.exam5?.topic || ""}: ${student.exam5?.desc || ""}${student.notebookLinks?.exam5 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam5}` : ''}
+1. **Lecture Exam 1 (Ch. 13-15):** \`${student.exam1?.id || ""}\` - ${student.exam1?.topic || ""}: ${student.exam1?.desc || ""}${student.notebookLinks?.exam1 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam1}` : ''}${student.gameLinks?.exam1 ? `\n   * **AI Game:** [${student.gameLinks.exam1.title}](${student.gameLinks.exam1.url})` : ''}
+2. **Lecture Exam 2 (Ch. 16, 19):** \`${student.exam2?.id || ""}\` - ${student.exam2?.topic || ""}: ${student.exam2?.desc || ""}${student.notebookLinks?.exam2 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam2}` : ''}${student.gameLinks?.exam2 ? `\n   * **AI Game:** [${student.gameLinks.exam2.title}](${student.gameLinks.exam2.url})` : ''}
+3. **Lecture Exam 3 (Ch. 17-18):** \`${student.exam3?.id || ""}\` - ${student.exam3?.topic || ""}: ${student.exam3?.desc || ""}${student.notebookLinks?.exam3 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam3}` : ''}${student.gameLinks?.exam3 ? `\n   * **AI Game:** [${student.gameLinks.exam3.title}](${student.gameLinks.exam3.url})` : ''}
+4. **Lecture Exam 4 (Ch. 20-21):** \`${student.exam4?.id || ""}\` - ${student.exam4?.topic || ""}: ${student.exam4?.desc || ""}${student.notebookLinks?.exam4 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam4}` : ''}${student.gameLinks?.exam4 ? `\n   * **AI Game:** [${student.gameLinks.exam4.title}](${student.gameLinks.exam4.url})` : ''}
+5. **Lecture Exam 5 (Ch. 22-24):** \`${student.exam5?.id || ""}\` - ${student.exam5?.topic || ""}: ${student.exam5?.desc || ""}${student.notebookLinks?.exam5 ? `\n   * **NotebookLM:** ${student.notebookLinks.exam5}` : ''}${student.gameLinks?.exam5 ? `\n   * **AI Game:** [${student.gameLinks.exam5.title}](${student.gameLinks.exam5.url})` : ''}
+${student.extraCredit ? `\n## Extra Credit Submissions\n* **⭐ ${student.extraCredit.title}** (${student.extraCredit.topic})\n  * **Interactive Game:** ${student.extraCredit.url}\n` : ''}
 
 ---
 *Signed by Student and Instructor for Academic Term 2026.*

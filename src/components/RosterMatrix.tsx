@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Student, AcademicSession } from '../types';
 import { hapsOutcomes } from '../data/outcomes';
-import { Search, Clipboard, Download, Printer, Settings, Award, BookOpen, ExternalLink } from 'lucide-react';
+import { Search, Clipboard, Download, Printer, Settings, Award, BookOpen, ExternalLink, Gamepad2, Sparkles } from 'lucide-react';
 
 interface RosterMatrixProps {
   students: Student[];
@@ -186,7 +186,20 @@ export default function RosterMatrix({
                     <tr key={student.id} className="hover:bg-gray-50/80 transition-colors">
                       <td className="p-4 font-mono text-center border-r-2 border-[#1E293B] text-[#64748B] font-bold">{idx + 1}</td>
                       <td className="p-4 font-mono text-xs border-r-2 border-[#1E293B] text-[#64748B] font-bold tracking-wide">{student.id}</td>
-                      <td className="p-4 font-display font-bold text-base border-r-2 border-[#1E293B] text-[#1E293B]">{student.name}</td>
+                      <td className="p-4 font-display font-bold text-base border-r-2 border-[#1E293B] text-[#1E293B]">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span>{student.name}</span>
+                          {student.extraCredit && (
+                            <span
+                              title={`Extra Credit: ${student.extraCredit.title}`}
+                              className="inline-flex items-center gap-1 text-[9px] font-display font-black uppercase text-amber-900 bg-amber-300 border border-[#1E293B] rounded-full px-2 py-0.5 shadow-xs"
+                            >
+                              <Sparkles className="w-2.5 h-2.5 text-amber-800" />
+                              <span>EC Game</span>
+                            </span>
+                          )}
+                        </div>
+                      </td>
                       <td className="p-4 border-r-2 border-[#1E293B]">
                         <span className={`inline-block text-[10px] font-display font-black uppercase px-2.5 py-1 rounded-full border-2 border-[#1E293B] shadow-sm ${
                           levelClass === 'freshman' ? 'bg-[#34D399] text-[#1E293B]' :
@@ -222,6 +235,20 @@ export default function RosterMatrix({
                                 <ExternalLink className="w-2 h-2" />
                               </a>
                             )}
+                            {student.gameLinks?.exam1 && (
+                              <a
+                                href={student.gameLinks.exam1.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={`Play ${student.name}'s AI Game: ${student.gameLinks.exam1.title}`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="inline-flex items-center gap-1 text-[9px] font-display font-black text-amber-950 hover:text-white bg-amber-300 hover:bg-amber-600 border border-[#1E293B] rounded-md px-1.5 py-0.5 transition-all shadow-xs active:translate-y-[1px]"
+                              >
+                                <Gamepad2 className="w-2.5 h-2.5" />
+                                <span>GAME</span>
+                                <ExternalLink className="w-2 h-2" />
+                              </a>
+                            )}
                           </div>
                         )}
                       </td>
@@ -246,6 +273,20 @@ export default function RosterMatrix({
                               >
                                 <BookOpen className="w-2.5 h-2.5" />
                                 <span>NLM 2</span>
+                                <ExternalLink className="w-2 h-2" />
+                              </a>
+                            )}
+                            {student.gameLinks?.exam2 && (
+                              <a
+                                href={student.gameLinks.exam2.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={`Play ${student.name}'s AI Game: ${student.gameLinks.exam2.title}`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="inline-flex items-center gap-1 text-[9px] font-display font-black text-amber-950 hover:text-white bg-amber-300 hover:bg-amber-600 border border-[#1E293B] rounded-md px-1.5 py-0.5 transition-all shadow-xs active:translate-y-[1px]"
+                              >
+                                <Gamepad2 className="w-2.5 h-2.5" />
+                                <span>GAME</span>
                                 <ExternalLink className="w-2 h-2" />
                               </a>
                             )}
@@ -276,6 +317,20 @@ export default function RosterMatrix({
                                 <ExternalLink className="w-2 h-2" />
                               </a>
                             )}
+                            {student.gameLinks?.exam3 && (
+                              <a
+                                href={student.gameLinks.exam3.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={`Play ${student.name}'s AI Game: ${student.gameLinks.exam3.title}`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="inline-flex items-center gap-1 text-[9px] font-display font-black text-amber-950 hover:text-white bg-amber-300 hover:bg-amber-600 border border-[#1E293B] rounded-md px-1.5 py-0.5 transition-all shadow-xs active:translate-y-[1px]"
+                              >
+                                <Gamepad2 className="w-2.5 h-2.5" />
+                                <span>GAME</span>
+                                <ExternalLink className="w-2 h-2" />
+                              </a>
+                            )}
                           </div>
                         )}
                       </td>
@@ -303,6 +358,20 @@ export default function RosterMatrix({
                                 <ExternalLink className="w-2 h-2" />
                               </a>
                             )}
+                            {student.gameLinks?.exam4 && (
+                              <a
+                                href={student.gameLinks.exam4.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={`Play ${student.name}'s AI Game: ${student.gameLinks.exam4.title}`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="inline-flex items-center gap-1 text-[9px] font-display font-black text-amber-950 hover:text-white bg-amber-300 hover:bg-amber-600 border border-[#1E293B] rounded-md px-1.5 py-0.5 transition-all shadow-xs active:translate-y-[1px]"
+                              >
+                                <Gamepad2 className="w-2.5 h-2.5" />
+                                <span>GAME</span>
+                                <ExternalLink className="w-2 h-2" />
+                              </a>
+                            )}
                           </div>
                         )}
                       </td>
@@ -327,6 +396,20 @@ export default function RosterMatrix({
                               >
                                 <BookOpen className="w-2.5 h-2.5" />
                                 <span>NLM 5</span>
+                                <ExternalLink className="w-2 h-2" />
+                              </a>
+                            )}
+                            {student.gameLinks?.exam5 && (
+                              <a
+                                href={student.gameLinks.exam5.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={`Play ${student.name}'s AI Game: ${student.gameLinks.exam5.title}`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="inline-flex items-center gap-1 text-[9px] font-display font-black text-amber-950 hover:text-white bg-amber-300 hover:bg-amber-600 border border-[#1E293B] rounded-md px-1.5 py-0.5 transition-all shadow-xs active:translate-y-[1px]"
+                              >
+                                <Gamepad2 className="w-2.5 h-2.5" />
+                                <span>GAME</span>
                                 <ExternalLink className="w-2 h-2" />
                               </a>
                             )}

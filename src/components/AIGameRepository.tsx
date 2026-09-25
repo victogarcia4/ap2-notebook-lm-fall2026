@@ -657,6 +657,12 @@ export default function AIGameRepository() {
                         <span className="text-[9px] font-display font-black text-[#8B5CF6] uppercase tracking-wider bg-[#FFFDF5] px-2 py-0.5 border border-[#1E293B] rounded-md">
                           {examMeta.label}
                         </span>
+                        {(game.topic.toLowerCase().includes('extra credit') || game.description.toLowerCase().includes('extra credit')) && (
+                          <span className="text-[9px] font-display font-black text-amber-900 uppercase tracking-wider bg-amber-300 px-2 py-0.5 border border-[#1E293B] rounded-md flex items-center gap-1 shadow-xs">
+                            <Sparkles className="w-2.5 h-2.5 text-amber-800" />
+                            <span>Extra Credit</span>
+                          </span>
+                        )}
                       </div>
                     </div>
 

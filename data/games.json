@@ -9,6 +9,17 @@
     "topic": "Reproduction & Development — Repro Rally AI Game",
     "description": "Interactive AI study game created on Genially reviewing reproduction and embryological development concepts.",
     "createdAt": "2026-09-20"
+  },
+  {
+    "id": "game-mcgruder-chelsea-rhythm-rescue",
+    "title": "Rhythm Rescue: Code Crimson",
+    "url": "https://heart-rhythm-rangers.lovable.app/",
+    "author": "Mcgruder, Chelsea",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Cardio: Heart — Cardiac Conduction & Emergency Rhythm Rescue (Extra Credit)",
+    "description": "Extra Credit Interactive AI Game: High-stakes clinical cardiac rhythm rescue challenge built on Lovable, covering pacemaking nodes, conduction pathways, and arrhythmia interventions.",
+    "createdAt": "2026-09-24"
   }
 ]
 

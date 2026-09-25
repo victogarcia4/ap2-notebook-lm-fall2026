@@ -163,7 +163,26 @@ export const defaultStudents: Student[] = [
       exam5: "https://notebook.google.com/notebook/fc604dc6-06b7-4c63-bbfc-dee672b05ede"
     }
   },
-  { id: "8084556", name: "Mcgruder, Chelsea", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
+  { 
+    id: "8084556", 
+    name: "Mcgruder, Chelsea", 
+    gradeBasis: "Graded", 
+    units: "4.00", 
+    plan: "Associate Degree - Associate of Science (AS)", 
+    level: "Freshman",
+    gameLinks: {
+      exam1: {
+        title: "Rhythm Rescue: Code Crimson",
+        url: "https://heart-rhythm-rangers.lovable.app/"
+      }
+    },
+    extraCredit: {
+      title: "Rhythm Rescue: Code Crimson",
+      url: "https://heart-rhythm-rangers.lovable.app/",
+      topic: "Cardio: Heart — Cardiac Conduction & Emergency Rhythm Rescue",
+      examId: "exam1"
+    }
+  },
   { id: "7946077", name: "Nguyen, Hoang", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
   { 
     id: "7857719", 
@@ -174,6 +193,12 @@ export const defaultStudents: Student[] = [
     level: "Freshman",
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/5d0c22fa-3985-4a8c-8e7c-ac74656ddfab"
+    },
+    gameLinks: {
+      exam5: {
+        title: "Repro Rally",
+        url: "https://view.genially.com/6aaea05538f46e380972d6d9"
+      }
     }
   },
   { 

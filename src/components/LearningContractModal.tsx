@@ -1,6 +1,6 @@
 import React from 'react';
 import { Student } from '../types';
-import { Printer, Copy, Headphones, X, Award, FileText, Check, BookOpen, ExternalLink } from 'lucide-react';
+import { Printer, Copy, Headphones, X, Award, FileText, Check, BookOpen, ExternalLink, Gamepad2, Sparkles } from 'lucide-react';
 import GeminiNotebookName from './GeminiNotebookName';
 
 interface LearningContractModalProps {
@@ -112,8 +112,8 @@ export default function LearningContractModal({
                   <div>
                     <span className="font-black text-[#1E293B]">{milestone.lo?.topic}:</span> {milestone.lo?.desc}
                   </div>
-                  {student.notebookLinks?.[milestone.examKey] && (
-                    <div className="mt-2 print:hidden">
+                  <div className="flex flex-wrap items-center gap-2 mt-2 print:hidden">
+                    {student.notebookLinks?.[milestone.examKey] && (
                       <a
                         href={student.notebookLinks[milestone.examKey]}
                         target="_blank"
@@ -124,12 +124,50 @@ export default function LearningContractModal({
                         <span>Open Submitted NotebookLM</span>
                         <ExternalLink className="w-2.5 h-2.5 stroke-[2.5px]" />
                       </a>
-                    </div>
-                  )}
+                    )}
+                    {student.gameLinks?.[milestone.examKey] && (
+                      <a
+                        href={student.gameLinks[milestone.examKey]!.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-[10px] font-display font-black text-amber-900 hover:text-white bg-amber-200 hover:bg-amber-600 px-2.5 py-1 rounded-md border-2 border-[#1E293B] shadow-[1.5px_1.5px_0px_0px_#1E293B] transition-all cursor-pointer"
+                      >
+                        <Gamepad2 className="w-3 h-3 stroke-[2.5px]" />
+                        <span>Play AI Game: {student.gameLinks[milestone.examKey]!.title}</span>
+                        <ExternalLink className="w-2.5 h-2.5 stroke-[2.5px]" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Extra Credit Showcase */}
+          {student.extraCredit && (
+            <div className="bg-amber-50 border-2 border-[#1E293B] rounded-xl p-4 pop-shadow-sm flex items-start gap-3 mt-4">
+              <Sparkles className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
+              <div className="text-xs">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="font-display font-black uppercase text-[10px] bg-amber-300 text-amber-950 px-2 py-0.5 rounded-md border border-[#1E293B]">
+                    ⭐ Extra Credit Completed
+                  </span>
+                  <strong className="text-[#1E293B] font-display text-sm">{student.extraCredit.title}</strong>
+                </div>
+                <p className="text-[#64748B] font-semibold mt-1">{student.extraCredit.topic}</p>
+                <a
+                  href={student.extraCredit.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-[10px] font-display font-black text-amber-950 hover:text-white bg-amber-300 hover:bg-amber-600 px-3 py-1.5 rounded-md border-2 border-[#1E293B] shadow-[2px_2px_0px_0px_#1E293B] transition-all cursor-pointer mt-2.5 print:hidden"
+                >
+                  <Gamepad2 className="w-3.5 h-3.5 stroke-[2.5px]" />
+                  <span>Launch Extra Credit Game</span>
+                  <ExternalLink className="w-3 h-3 stroke-[2.5px]" />
+                </a>
+              </div>
+            </div>
+          )}
 
           {/* Custom navigation button */}
           <div className="text-center mt-6 print:hidden">
