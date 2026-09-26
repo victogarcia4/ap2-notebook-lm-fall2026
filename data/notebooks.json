@@ -383,6 +383,17 @@
     "topic": "Lymphatic — Structural Outline & Drainage Dynamics (AP-19-N-01-01)",
     "description": "Describe the structural outline, drainage, and volume-clearing role of the lymphatic system.",
     "createdAt": "2026-09-22"
+  },
+  {
+    "id": "notebook-clark-tiya-exam2",
+    "title": "Antibody Classes & Neutralization Mechanisms NotebookLM (AP-19-N-09-02)",
+    "url": "https://notebook.google.com/notebook/bc7b3f19-eabe-42ef-a10e-ac9028780fb9",
+    "author": "Clark, Tiya",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Immunity — Antibody Structures & Neutralization (AP-19-N-09-02)",
+    "description": "Contrast structures, classes (IgG, IgM, IgA, IgE, IgD) and neutralization mechanisms of antibodies.",
+    "createdAt": "2026-09-26"
   }
 ]
 

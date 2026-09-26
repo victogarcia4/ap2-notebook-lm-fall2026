@@ -43,8 +43,21 @@ export const defaultStudents: Student[] = [
     units: "4.00", 
     plan: "Associate Degree - Associate of Science (AS)", 
     level: "Freshman",
+    exam1: {
+      id: "AP-19-K-03-01",
+      chap: "14",
+      topic: "Blood",
+      desc: "Describe structure, function, and development (erythropoiesis) of mature red blood cells."
+    },
+    exam2: {
+      id: "AP-19-N-09-02",
+      chap: "16",
+      topic: "Immunity",
+      desc: "Contrast structures, classes (IgG, IgM, IgA, IgE, IgD) and neutralization mechanisms of antibodies."
+    },
     notebookLinks: {
-      exam1: "https://notebook.google.com/notebook/c39b2e9f-76b4-4c46-a328-3ef1987cb3c9"
+      exam1: "https://notebook.google.com/notebook/c39b2e9f-76b4-4c46-a328-3ef1987cb3c9",
+      exam2: "https://notebook.google.com/notebook/bc7b3f19-eabe-42ef-a10e-ac9028780fb9"
     }
   },
   { id: "0609900", name: "Cooper, Kendra", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
