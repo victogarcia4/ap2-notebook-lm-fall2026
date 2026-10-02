@@ -20,6 +20,17 @@
     "topic": "Cardio: Heart — Cardiac Conduction & Emergency Rhythm Rescue (Extra Credit)",
     "description": "Extra Credit Interactive AI Game: High-stakes clinical cardiac rhythm rescue challenge built on Lovable, covering pacemaking nodes, conduction pathways, and arrhythmia interventions.",
     "createdAt": "2026-09-24"
+  },
+  {
+    "id": "game-henegariu-sarah-tonicity-challenge",
+    "title": "Tonicity Challenge: Clinical Fluid Management",
+    "url": "https://osmosis-rx-iv-fluid-tonicity-game.ai.studio/",
+    "author": "Henegariu, Sarah",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Fluid/Acid-Base — Osmosis Rx, IV Fluid Tonicity & Clinical Fluid Management (Extra Credit)",
+    "description": "Extra Credit Interactive AI Game: Clinical fluid therapy simulation challenging learners to manage IV fluid tonicity, osmotic shifts across ICF/ECF, and cellular volume equilibrium.",
+    "createdAt": "2026-10-02"
   }
 ]
 

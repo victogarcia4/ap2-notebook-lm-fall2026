@@ -137,6 +137,18 @@ export const defaultStudents: Student[] = [
       exam3: "https://notebook.google.com/notebook/f0d6337d-8730-4dc7-b69d-75279e228858",
       exam4: "https://notebook.google.com/notebook/abb95f7d-895b-4297-bc86-b4d4711f7c4b",
       exam5: "https://notebook.google.com/notebook/b9c0cbe4-e3c0-4919-9bd9-5bc069981465"
+    },
+    gameLinks: {
+      exam4: {
+        title: "Tonicity Challenge: Clinical Fluid Management",
+        url: "https://osmosis-rx-iv-fluid-tonicity-game.ai.studio/"
+      }
+    },
+    extraCredit: {
+      title: "Tonicity Challenge: Clinical Fluid Management",
+      url: "https://osmosis-rx-iv-fluid-tonicity-game.ai.studio/",
+      topic: "Fluid/Acid-Base — Osmosis Rx, IV Fluid Tonicity & Clinical Fluid Management",
+      examId: "exam4"
     }
   },
   { 
