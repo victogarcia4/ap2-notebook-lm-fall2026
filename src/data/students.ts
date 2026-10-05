@@ -233,9 +233,42 @@ export const defaultStudents: Student[] = [
     units: "4.00", 
     plan: "Associate Degree - Associate of Science (AS)", 
     level: "Freshman",
+    exam1: {
+      id: "AP-19-L-03-02",
+      chap: "15",
+      topic: "Cardio: Heart",
+      desc: "Trace systemic, pulmonary, and coronary pathways of blood flow through specific chambers & valves."
+    },
+    exam2: {
+      id: "AP-19-O-10-01",
+      chap: "19",
+      topic: "Respiratory",
+      desc: "Describe carbaminohemoglobin and bicarbonate buffer mechanisms transporting CO2 in plasma."
+    },
+    exam3: {
+      id: "AP-19-Q-07-01",
+      chap: "18",
+      topic: "Metabolism",
+      desc: "Describe hypothalamic set-points, shivering, vasodilation, and core thermal feedback."
+    },
+    exam4: {
+      id: "AP-19-S-03-01",
+      chap: "20",
+      topic: "Fluid/Acid-Base",
+      desc: "Describe cellular impacts and hormonal control of hypernatremia, hyponatremia, and hyperkalemia."
+    },
+    exam5: {
+      id: "AP-19-T-05-02",
+      chap: "23",
+      topic: "Development",
+      desc: "Describe embryogenesis of chorion, amnion, allantois, yolk sac, and functional syncytiotrophoblast roles."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/6f962c26-26a8-46df-9eb6-8a686321de71",
-      exam2: "https://notebook.google.com/notebook/c412d07e-d67a-4629-9841-53a9a55bb2a3"
+      exam2: "https://notebook.google.com/notebook/c412d07e-d67a-4629-9841-53a9a55bb2a3",
+      exam3: "https://notebook.google.com/notebook/0bb65e8c-e320-421e-a4a0-688b0a4d013a",
+      exam4: "https://notebook.google.com/notebook/266ccfdb-a9e8-48e0-a7d9-8bc5b10cb94d",
+      exam5: "https://notebook.google.com/notebook/db13def2-9a53-4d54-8b09-f3941e9bd275"
     }
   },
   { 

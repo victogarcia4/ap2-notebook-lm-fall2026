@@ -394,6 +394,39 @@
     "topic": "Immunity — Antibody Structures & Neutralization (AP-19-N-09-02)",
     "description": "Contrast structures, classes (IgG, IgM, IgA, IgE, IgD) and neutralization mechanisms of antibodies.",
     "createdAt": "2026-09-26"
+  },
+  {
+    "id": "notebook-randle-jada-exam3",
+    "title": "Thermoregulation & Hypothalamic Feedback NotebookLM (AP-19-Q-07-01)",
+    "url": "https://notebook.google.com/notebook/0bb65e8c-e320-421e-a4a0-688b0a4d013a",
+    "author": "Randle, Jada",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Metabolism — Thermoregulation & Core Thermal Feedback (AP-19-Q-07-01)",
+    "description": "Describe hypothalamic set-points, shivering, vasodilation, and core thermal feedback.",
+    "createdAt": "2026-10-05"
+  },
+  {
+    "id": "notebook-randle-jada-exam4",
+    "title": "Electrolyte Imbalances & Hormonal Control NotebookLM (AP-19-S-03-01)",
+    "url": "https://notebook.google.com/notebook/266ccfdb-a9e8-48e0-a7d9-8bc5b10cb94d",
+    "author": "Randle, Jada",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Fluid/Acid-Base — Electrolyte Imbalances & Control (AP-19-S-03-01)",
+    "description": "Describe cellular impacts and hormonal control of hypernatremia, hyponatremia, and hyperkalemia.",
+    "createdAt": "2026-10-05"
+  },
+  {
+    "id": "notebook-randle-jada-exam5",
+    "title": "Embryogenesis & Extraembryonic Membranes NotebookLM (AP-19-T-05-02)",
+    "url": "https://notebook.google.com/notebook/db13def2-9a53-4d54-8b09-f3941e9bd275",
+    "author": "Randle, Jada",
+    "role": "student",
+    "examId": "exam5",
+    "topic": "Development — Extraembryonic Membranes & Syncytiotrophoblast (AP-19-T-05-02)",
+    "description": "Describe embryogenesis of chorion, amnion, allantois, yolk sac, and functional syncytiotrophoblast roles.",
+    "createdAt": "2026-10-05"
   }
 ]
 
