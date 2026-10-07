@@ -93,8 +93,15 @@ export const defaultStudents: Student[] = [
       topic: "Endocrine",
       desc: "Describe the general functions of the endocrine system and relate it to communication speed."
     },
+    exam2: {
+      id: "AP-19-O-10-01",
+      chap: "19",
+      topic: "Respiratory",
+      desc: "Describe carbaminohemoglobin and bicarbonate buffer mechanisms transporting CO2 in plasma."
+    },
     notebookLinks: {
-      exam1: "https://notebook.google.com/notebook/93f3d840-015f-43a0-b874-903f109e95d8"
+      exam1: "https://notebook.google.com/notebook/93f3d840-015f-43a0-b874-903f109e95d8",
+      exam2: "https://notebook.google.com/notebook/45cb6425-2192-4761-9707-1b846e0386d4"
     }
   },
   { id: "7768690", name: "Flores, Jaqueline", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },

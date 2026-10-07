@@ -427,6 +427,17 @@
     "topic": "Development — Extraembryonic Membranes & Syncytiotrophoblast (AP-19-T-05-02)",
     "description": "Describe embryogenesis of chorion, amnion, allantois, yolk sac, and functional syncytiotrophoblast roles.",
     "createdAt": "2026-10-05"
+  },
+  {
+    "id": "notebook-escamilla-desteny-exam2",
+    "title": "Respiratory CO2 Transport & Bicarbonate Buffer NotebookLM (AP-19-O-10-01)",
+    "url": "https://notebook.google.com/notebook/45cb6425-2192-4761-9707-1b846e0386d4",
+    "author": "Escamilla, Desteny",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Respiratory — CO2 Transport & Bicarbonate Buffer (AP-19-O-10-01)",
+    "description": "Describe carbaminohemoglobin and bicarbonate buffer mechanisms transporting CO2 in plasma.",
+    "createdAt": "2026-10-07"
   }
 ]
 
