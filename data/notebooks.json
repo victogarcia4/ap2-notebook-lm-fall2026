@@ -438,6 +438,17 @@
     "topic": "Respiratory — CO2 Transport & Bicarbonate Buffer (AP-19-O-10-01)",
     "description": "Describe carbaminohemoglobin and bicarbonate buffer mechanisms transporting CO2 in plasma.",
     "createdAt": "2026-10-07"
+  },
+  {
+    "id": "notebook-ledesma-debora-exam2",
+    "title": "Cell-Mediated Immunity & MHC Pathways NotebookLM (AP-19-N-08-01)",
+    "url": "https://notebook.google.com/notebook/135702db-b081-47a1-9819-2b83b0c8203d",
+    "author": "Ledesma, Debora",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Immunity — Cell-Mediated Activation & MHC (AP-19-N-08-01)",
+    "description": "Describe cell-mediated activation pathways involving MHC-I/II proteins, Helper & Cytotoxic T cells.",
+    "createdAt": "2026-10-09"
   }
 ]
 

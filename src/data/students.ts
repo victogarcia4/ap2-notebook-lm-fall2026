@@ -165,8 +165,21 @@ export const defaultStudents: Student[] = [
     units: "4.00", 
     plan: "Associate Degree - Associate of Science (AS)", 
     level: "Freshman",
+    exam1: {
+      id: "AP-19-J-05-02",
+      chap: "13",
+      topic: "Endocrine",
+      desc: "List pituitary hormones (anterior/posterior) and summarize their target organs and physiological impact."
+    },
+    exam2: {
+      id: "AP-19-N-08-01",
+      chap: "16",
+      topic: "Immunity",
+      desc: "Describe cell-mediated activation pathways involving MHC-I/II proteins, Helper & Cytotoxic T cells."
+    },
     notebookLinks: {
-      exam1: "https://notebook.google.com/notebook/a27e856b-8195-4430-8273-34820328b2f7"
+      exam1: "https://notebook.google.com/notebook/a27e856b-8195-4430-8273-34820328b2f7",
+      exam2: "https://notebook.google.com/notebook/135702db-b081-47a1-9819-2b83b0c8203d"
     }
   },
   { 
