@@ -449,6 +449,17 @@
     "topic": "Immunity — Cell-Mediated Activation & MHC (AP-19-N-08-01)",
     "description": "Describe cell-mediated activation pathways involving MHC-I/II proteins, Helper & Cytotoxic T cells.",
     "createdAt": "2026-10-09"
+  },
+  {
+    "id": "notebook-arzola-garza-maria-exam2",
+    "title": "Innate vs. Adaptive Immunity NotebookLM (AP-19-N-03-01)",
+    "url": "https://notebook.google.com/notebook/9ebfef18-2f63-473c-8faa-8d093c7ee692",
+    "author": "Arzola Garza, Maria",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Lymphatic — Innate vs. Adaptive Defenses (AP-19-N-03-01)",
+    "description": "Compare and contrast innate (nonspecific) defenses with adaptive (specific) adaptive immunity.",
+    "createdAt": "2026-10-10"
   }
 ]
 

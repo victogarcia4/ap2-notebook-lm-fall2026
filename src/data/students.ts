@@ -16,8 +16,15 @@ export const defaultStudents: Student[] = [
       topic: "Endocrine",
       desc: "List pituitary hormones (anterior/posterior) and summarize their target organs and physiological impact."
     },
+    exam2: {
+      id: "AP-19-N-03-01",
+      chap: "16",
+      topic: "Lymphatic",
+      desc: "Compare and contrast innate (nonspecific) defenses with adaptive (specific) adaptive immunity."
+    },
     notebookLinks: {
-      exam1: "https://notebook.google.com/notebook/58f78b2f-cd1a-4651-802a-525afa4020f8"
+      exam1: "https://notebook.google.com/notebook/58f78b2f-cd1a-4651-802a-525afa4020f8",
+      exam2: "https://notebook.google.com/notebook/9ebfef18-2f63-473c-8faa-8d093c7ee692"
     }
   },
   { id: "1065979", name: "Banks, Quiandria", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
