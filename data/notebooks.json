@@ -460,6 +460,28 @@
     "topic": "Lymphatic — Innate vs. Adaptive Defenses (AP-19-N-03-01)",
     "description": "Compare and contrast innate (nonspecific) defenses with adaptive (specific) adaptive immunity.",
     "createdAt": "2026-10-10"
+  },
+  {
+    "id": "notebook-orosco-jose-exam2",
+    "title": "Quiet vs. Forced Inspiration Dynamics NotebookLM (AP-19-O-07-02)",
+    "url": "https://notebook.google.com/notebook/018357de-acdd-4f99-94e4-62504bb5803f",
+    "author": "Orosco, Jose",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Respiratory — Quiet vs. Forced Inspiration Dynamics (AP-19-O-07-02)",
+    "description": "Explain physical pressure differentials and muscle activations for quiet vs forced inspiration.",
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "notebook-sallam-noor-exam2",
+    "title": "Lymphatic Outline, Drainage & Volume-Clearing NotebookLM (AP-19-N-01-01)",
+    "url": "https://notebook.google.com/notebook/957e458b-fde2-4b50-bc2c-f3e0901b12d0?authuser=1",
+    "author": "Sallam, Noor",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Lymphatic — Structural Outline & Drainage Dynamics (AP-19-N-01-01)",
+    "description": "Describe the structural outline, drainage, and volume-clearing role of the lymphatic system.",
+    "createdAt": "2026-10-11"
   }
 ]
 

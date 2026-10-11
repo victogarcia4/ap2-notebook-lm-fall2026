@@ -243,8 +243,21 @@ export const defaultStudents: Student[] = [
     units: "4.00", 
     plan: "Associate Degree - Associate of Science (AS)", 
     level: "Freshman",
+    exam1: {
+      id: "AP-19-K-07-01",
+      chap: "14",
+      topic: "Blood",
+      desc: "Predict which blood types are compatible and what happens when the incorrect ABO or Rh blood type is transfused."
+    },
+    exam2: {
+      id: "AP-19-O-07-02",
+      chap: "19",
+      topic: "Respiratory",
+      desc: "Explain physical pressure differentials and muscle activations for quiet vs forced inspiration."
+    },
     notebookLinks: {
-      exam1: "https://notebook.google.com/notebook/5d0c22fa-3985-4a8c-8e7c-ac74656ddfab"
+      exam1: "https://notebook.google.com/notebook/5d0c22fa-3985-4a8c-8e7c-ac74656ddfab",
+      exam2: "https://notebook.google.com/notebook/018357de-acdd-4f99-94e4-62504bb5803f"
     },
     gameLinks: {
       exam5: {
@@ -323,8 +336,15 @@ export const defaultStudents: Student[] = [
       topic: "Endocrine",
       desc: "Describe the general functions of the endocrine system and relate it to communication speed."
     },
+    exam2: {
+      id: "AP-19-N-01-01",
+      chap: "16",
+      topic: "Lymphatic",
+      desc: "Describe the structural outline, drainage, and volume-clearing role of the lymphatic system."
+    },
     notebookLinks: {
-      exam1: "https://notebook.google.com/notebook/31d97b16-fb41-48af-91e4-102423fda3d3"
+      exam1: "https://notebook.google.com/notebook/31d97b16-fb41-48af-91e4-102423fda3d3",
+      exam2: "https://notebook.google.com/notebook/957e458b-fde2-4b50-bc2c-f3e0901b12d0?authuser=1"
     }
   },
   { id: "7917578", name: "Seda Sepulveda, Isaias", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
