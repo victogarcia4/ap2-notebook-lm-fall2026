@@ -81,8 +81,15 @@ export const defaultStudents: Student[] = [
       topic: "Endocrine",
       desc: "Describe the general functions of the endocrine system and relate it to communication speed."
     },
+    exam2: {
+      id: "AP-19-N-01-01",
+      chap: "16",
+      topic: "Lymphatic",
+      desc: "Describe the structural outline, drainage, and volume-clearing role of the lymphatic system."
+    },
     notebookLinks: {
-      exam1: "https://notebook.google.com/notebook/632a7938-db20-4217-a082-11d9cf7bff0e"
+      exam1: "https://notebook.google.com/notebook/632a7938-db20-4217-a082-11d9cf7bff0e",
+      exam2: "https://notebook.google.com/notebook/ac30b921-cec4-4e6f-b08c-c69ef039cfa6"
     }
   },
   { id: "7377841", name: "Boykin, Kalynn", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
