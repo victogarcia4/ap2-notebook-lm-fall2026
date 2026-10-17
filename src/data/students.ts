@@ -138,9 +138,16 @@ export const defaultStudents: Student[] = [
       topic: "Lymphatic",
       desc: "Describe the structural outline, drainage, and volume-clearing role of the lymphatic system."
     },
+    exam3: {
+      id: "AP-19-P-01-01",
+      chap: "17",
+      topic: "Digestive",
+      desc: "List organs of the gastrointestinal tract and define ingestion, propulsion, mechanical digestion."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/eed4ceb6-759f-4c69-ba2f-84714681db1c",
-      exam2: "https://notebook.google.com/notebook/a713e465-42f3-45e7-a18a-40765351a66a"
+      exam2: "https://notebook.google.com/notebook/a713e465-42f3-45e7-a18a-40765351a66a",
+      exam3: "https://notebook.google.com/notebook/9590c5d0-b2e8-4a5f-a907-11b7da66ca25"
     }
   },
   { id: "7881034", name: "Grant, Kmirrah", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
