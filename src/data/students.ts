@@ -191,9 +191,16 @@ export const defaultStudents: Student[] = [
       topic: "Immunity",
       desc: "Describe cell-mediated activation pathways involving MHC-I/II proteins, Helper & Cytotoxic T cells."
     },
+    exam3: {
+      id: "AP-19-P-09-01",
+      chap: "17",
+      topic: "Digestive",
+      desc: "Trace chemical breakdown and standard symport/facilitated absorption of carbohydrates and proteins."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/a27e856b-8195-4430-8273-34820328b2f7",
-      exam2: "https://notebook.google.com/notebook/135702db-b081-47a1-9819-2b83b0c8203d"
+      exam2: "https://notebook.google.com/notebook/135702db-b081-47a1-9819-2b83b0c8203d",
+      exam3: "https://notebook.google.com/notebook/feb4241f-b326-4554-80ae-8a9cf8d52587"
     }
   },
   { 
