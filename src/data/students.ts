@@ -62,9 +62,16 @@ export const defaultStudents: Student[] = [
       topic: "Immunity",
       desc: "Contrast structures, classes (IgG, IgM, IgA, IgE, IgD) and neutralization mechanisms of antibodies."
     },
+    exam3: {
+      id: "AP-19-P-11-01",
+      chap: "17",
+      topic: "Digestive",
+      desc: "Explain neural (myenteric) and hormonal (gastrin, CCK, secretin) phases of gastric and duodenal control."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/c39b2e9f-76b4-4c46-a328-3ef1987cb3c9",
-      exam2: "https://notebook.google.com/notebook/bc7b3f19-eabe-42ef-a10e-ac9028780fb9"
+      exam2: "https://notebook.google.com/notebook/bc7b3f19-eabe-42ef-a10e-ac9028780fb9",
+      exam3: "https://notebook.google.com/notebook/e7e3dd35-2e24-4016-9f23-1267c3ef89ae"
     }
   },
   { id: "0609900", name: "Cooper, Kendra", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
@@ -87,6 +94,12 @@ export const defaultStudents: Student[] = [
       topic: "Lymphatic",
       desc: "Describe the structural outline, drainage, and volume-clearing role of the lymphatic system."
     },
+    exam3: {
+      id: "AP-19-P-01-01",
+      chap: "17",
+      topic: "Digestive",
+      desc: "List organs of the gastrointestinal tract and define ingestion, propulsion, mechanical digestion."
+    },
     exam4: {
       id: "AP-19-R-01-01",
       chap: "21",
@@ -96,6 +109,7 @@ export const defaultStudents: Student[] = [
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/632a7938-db20-4217-a082-11d9cf7bff0e",
       exam2: "https://notebook.google.com/notebook/ac30b921-cec4-4e6f-b08c-c69ef039cfa6",
+      exam3: "https://notebook.google.com/notebook/132fd5cc-3362-4594-b852-d9f319e1815e",
       exam4: "https://notebook.google.com/notebook/55d5a9c1-a687-4529-a8c0-ba4396985f76"
     }
   },
@@ -120,9 +134,16 @@ export const defaultStudents: Student[] = [
       topic: "Respiratory",
       desc: "Describe carbaminohemoglobin and bicarbonate buffer mechanisms transporting CO2 in plasma."
     },
+    exam3: {
+      id: "AP-19-Q-07-01",
+      chap: "18",
+      topic: "Metabolism",
+      desc: "Describe hypothalamic set-points, shivering, vasodilation, and core thermal feedback."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/93f3d840-015f-43a0-b874-903f109e95d8",
-      exam2: "https://notebook.google.com/notebook/45cb6425-2192-4761-9707-1b846e0386d4"
+      exam2: "https://notebook.google.com/notebook/45cb6425-2192-4761-9707-1b846e0386d4",
+      exam3: "https://notebook.google.com/notebook/1789c188-eb88-4385-b978-a97081a8c86b"
     }
   },
   { id: "7768690", name: "Flores, Jaqueline", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
@@ -177,6 +198,12 @@ export const defaultStudents: Student[] = [
       topic: "Lymphatic",
       desc: "Summarize anatomy and lymphoid roles of lymph nodes, spleen, red bone marrow, and thymus."
     },
+    exam3: {
+      id: "AP-19-P-02-01",
+      chap: "17",
+      topic: "Digestive",
+      desc: "Contrast the basic histological layers of the canal: mucosa, submucosa, muscularis, and serosa."
+    },
     exam4: {
       id: "AP-19-R-01-01",
       chap: "21",
@@ -185,6 +212,7 @@ export const defaultStudents: Student[] = [
     },
     notebookLinks: {
       exam2: "https://notebook.google.com/notebook/0aa6a93a-b4b7-460e-b3ed-5ef869c738ca",
+      exam3: "https://notebook.google.com/notebook/2d6e8f5b-d889-4760-9a2e-384437456f3d",
       exam4: "https://notebook.google.com/notebook/0ee91433-ec56-47d5-8950-3c0906bf447a"
     }
   },
@@ -266,6 +294,12 @@ export const defaultStudents: Student[] = [
       topic: "Immunity",
       desc: "Contrast structures, classes (IgG, IgM, IgA, IgE, IgD) and neutralization mechanisms of antibodies."
     },
+    exam3: {
+      id: "AP-19-P-11-01",
+      chap: "17",
+      topic: "Digestive",
+      desc: "Explain neural (myenteric) and hormonal (gastrin, CCK, secretin) phases of gastric and duodenal control."
+    },
     exam4: {
       id: "AP-19-R-08-01",
       chap: "21",
@@ -281,6 +315,7 @@ export const defaultStudents: Student[] = [
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/c999ebfa-bc9c-420e-852d-dfde51380367",
       exam2: "https://notebook.google.com/notebook/9d877068-5ab1-41bc-a753-d8d15f631031",
+      exam3: "https://notebook.google.com/notebook/ff36846d-afaa-42c5-bfcc-3c66bd3c3b27",
       exam4: "https://notebook.google.com/notebook/d8ae9ef6-bc6f-462f-96f1-04be0a71f933",
       exam5: "https://notebook.google.com/notebook/9257fd9e-d0f6-48e1-8929-91b4e3366888"
     }
@@ -355,9 +390,16 @@ export const defaultStudents: Student[] = [
       topic: "Respiratory",
       desc: "Explain physical pressure differentials and muscle activations for quiet vs forced inspiration."
     },
+    exam3: {
+      id: "AP-19-Q-06-01",
+      chap: "18",
+      topic: "Metabolism",
+      desc: "Contrast systemic hormone distributions during absorptive (insulin) vs post-absorptive (glucagon) states."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/5d0c22fa-3985-4a8c-8e7c-ac74656ddfab",
-      exam2: "https://notebook.google.com/notebook/018357de-acdd-4f99-94e4-62504bb5803f"
+      exam2: "https://notebook.google.com/notebook/018357de-acdd-4f99-94e4-62504bb5803f",
+      exam3: "https://notebook.google.com/notebook/77107667-6acc-4279-b101-bf3abc6ad3e3"
     },
     gameLinks: {
       exam5: {
@@ -418,9 +460,28 @@ export const defaultStudents: Student[] = [
     units: "4.00", 
     plan: "Associate Degree - Associate of Science (AS)", 
     level: "Freshman",
+    exam1: {
+      id: "AP-19-L-05-01",
+      chap: "15",
+      topic: "Cardio: Heart",
+      desc: "Identify components of the intrinsic cardiac conduction system and relate them to pacemaking."
+    },
+    exam2: {
+      id: "AP-19-O-11-01",
+      chap: "19",
+      topic: "Respiratory",
+      desc: "Examine central/peripheral chemoreceptor controls regulating rate & depth of alveolar ventilation."
+    },
+    exam3: {
+      id: "AP-19-Q-09-01",
+      chap: "18",
+      topic: "Metabolism",
+      desc: "Summarize nutritional requirements, classifications, and systemic functions of essential vitamins & minerals."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/9df95331-507a-4314-a0c3-a3c7ba62eeca",
-      exam2: "https://notebook.google.com/notebook/ad80631f-7314-4927-aeef-400bcf429847"
+      exam2: "https://notebook.google.com/notebook/ad80631f-7314-4927-aeef-400bcf429847",
+      exam3: "https://notebook.google.com/notebook/d13817f2-e907-4b63-8a94-b07ff0667075"
     }
   },
   { 
@@ -442,9 +503,16 @@ export const defaultStudents: Student[] = [
       topic: "Lymphatic",
       desc: "Describe the structural outline, drainage, and volume-clearing role of the lymphatic system."
     },
+    exam3: {
+      id: "AP-19-P-01-01",
+      chap: "17",
+      topic: "Digestive",
+      desc: "List organs of the gastrointestinal tract and define ingestion, propulsion, mechanical digestion."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/31d97b16-fb41-48af-91e4-102423fda3d3",
-      exam2: "https://notebook.google.com/notebook/957e458b-fde2-4b50-bc2c-f3e0901b12d0?authuser=1"
+      exam2: "https://notebook.google.com/notebook/957e458b-fde2-4b50-bc2c-f3e0901b12d0?authuser=1",
+      exam3: "https://notebook.google.com/notebook/aabcc280-056f-47ac-b1db-c7c9a0d59458?authuser=1"
     }
   },
   { id: "7917578", name: "Seda Sepulveda, Isaias", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },

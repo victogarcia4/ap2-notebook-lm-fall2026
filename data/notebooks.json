@@ -603,6 +603,94 @@
     "topic": "Fluid/Acid-Base — Arterial Blood Gas Diagnosis & Compensation (AP-19-S-05-01)",
     "description": "Diagnose arterial blood gas values to identify respiratory acidosis/alkalosis with metabolic compensation.",
     "createdAt": "2026-10-24"
+  },
+  {
+    "id": "notebook-clark-tiya-exam3",
+    "title": "Gastric & Duodenal Neural & Hormonal Control NotebookLM (AP-19-P-11-01)",
+    "url": "https://notebook.google.com/notebook/e7e3dd35-2e24-4016-9f23-1267c3ef89ae",
+    "author": "Clark, Tiya",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Digestive — Gastric & Duodenal Control Phases (AP-19-P-11-01)",
+    "description": "Explain neural (myenteric) and hormonal (gastrin, CCK, secretin) phases of gastric and duodenal control.",
+    "createdAt": "2026-10-25"
+  },
+  {
+    "id": "notebook-dacus-lynli-exam3",
+    "title": "GI Tract Organs & Primary Digestive Processes NotebookLM (AP-19-P-01-01)",
+    "url": "https://notebook.google.com/notebook/132fd5cc-3362-4594-b852-d9f319e1815e",
+    "author": "Dacus, Lynli",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Digestive — GI Tract Organs & Primary Processes (AP-19-P-01-01)",
+    "description": "List organs of the gastrointestinal tract and define ingestion, propulsion, mechanical digestion.",
+    "createdAt": "2026-10-25"
+  },
+  {
+    "id": "notebook-escamilla-desteny-exam3",
+    "title": "Thermoregulation & Hypothalamic Feedback NotebookLM (AP-19-Q-07-01)",
+    "url": "https://notebook.google.com/notebook/1789c188-eb88-4385-b978-a97081a8c86b",
+    "author": "Escamilla, Desteny",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Metabolism — Thermoregulation & Core Thermal Feedback (AP-19-Q-07-01)",
+    "description": "Describe hypothalamic set-points, shivering, vasodilation, and core thermal feedback.",
+    "createdAt": "2026-10-25"
+  },
+  {
+    "id": "notebook-grant-kmirrah-exam3",
+    "title": "GI Tract Histological Layers NotebookLM (AP-19-P-02-01)",
+    "url": "https://notebook.google.com/notebook/2d6e8f5b-d889-4760-9a2e-384437456f3d",
+    "author": "Grant, Kmirrah",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Digestive — Histological Layers of GI Canal (AP-19-P-02-01)",
+    "description": "Contrast the basic histological layers of the canal: mucosa, submucosa, muscularis, and serosa.",
+    "createdAt": "2026-10-25"
+  },
+  {
+    "id": "notebook-lerma-stephanie-exam3",
+    "title": "Gastric & Duodenal Neural & Hormonal Control NotebookLM (AP-19-P-11-01)",
+    "url": "https://notebook.google.com/notebook/ff36846d-afaa-42c5-bfcc-3c66bd3c3b27",
+    "author": "Lerma, Stephanie",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Digestive — Gastric & Duodenal Control Phases (AP-19-P-11-01)",
+    "description": "Explain neural (myenteric) and hormonal (gastrin, CCK, secretin) phases of gastric and duodenal control.",
+    "createdAt": "2026-10-25"
+  },
+  {
+    "id": "notebook-orosco-jose-exam3",
+    "title": "Absorptive vs. Post-Absorptive Hormone Dynamics NotebookLM (AP-19-Q-06-01)",
+    "url": "https://notebook.google.com/notebook/77107667-6acc-4279-b101-bf3abc6ad3e3",
+    "author": "Orosco, Jose",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Metabolism — Absorptive vs. Post-Absorptive States (AP-19-Q-06-01)",
+    "description": "Contrast systemic hormone distributions during absorptive (insulin) vs post-absorptive (glucagon) states.",
+    "createdAt": "2026-10-25"
+  },
+  {
+    "id": "notebook-regalado-keila-exam3",
+    "title": "Nutritional Requirements, Vitamins & Minerals NotebookLM (AP-19-Q-09-01)",
+    "url": "https://notebook.google.com/notebook/d13817f2-e907-4b63-8a94-b07ff0667075",
+    "author": "Regalado, Keila",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Metabolism — Essential Vitamins & Minerals (AP-19-Q-09-01)",
+    "description": "Summarize nutritional requirements, classifications, and systemic functions of essential vitamins & minerals.",
+    "createdAt": "2026-10-25"
+  },
+  {
+    "id": "notebook-sallam-noor-exam3",
+    "title": "GI Tract Organs & Primary Digestive Processes NotebookLM (AP-19-P-01-01)",
+    "url": "https://notebook.google.com/notebook/aabcc280-056f-47ac-b1db-c7c9a0d59458?authuser=1",
+    "author": "Sallam, Noor",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Digestive — GI Tract Organs & Primary Processes (AP-19-P-01-01)",
+    "description": "List organs of the gastrointestinal tract and define ingestion, propulsion, mechanical digestion.",
+    "createdAt": "2026-10-25"
   }
 ]
 
