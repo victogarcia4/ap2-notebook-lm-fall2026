@@ -515,6 +515,94 @@
     "topic": "Digestive — GI Tract Organs & Primary Processes (AP-19-P-01-01)",
     "description": "List organs of the gastrointestinal tract and define ingestion, propulsion, mechanical digestion.",
     "createdAt": "2026-10-17"
+  },
+  {
+    "id": "notebook-mcgruder-chelsea-exam1",
+    "title": "Erythrocyte Structure & Erythropoiesis NotebookLM (AP-19-K-03-01)",
+    "url": "https://notebook.google.com/notebook/3953916c-8f1f-4bfa-a140-4afbeb9e0b36",
+    "author": "Mcgruder, Chelsea",
+    "role": "student",
+    "examId": "exam1",
+    "topic": "Blood — Erythrocyte Structure & Erythropoiesis (AP-19-K-03-01)",
+    "description": "Describe structure, function, and development (erythropoiesis) of mature red blood cells.",
+    "createdAt": "2026-10-24"
+  },
+  {
+    "id": "notebook-mcgruder-chelsea-exam2",
+    "title": "Respiratory Membrane Anatomy & Properties NotebookLM (AP-19-O-05-01)",
+    "url": "https://notebook.google.com/notebook/5d0d1c2f-4ed6-44a2-a4c9-d9d143387f36",
+    "author": "Mcgruder, Chelsea",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Respiratory — Respiratory Membrane Anatomy & Properties (AP-19-O-05-01)",
+    "description": "Examine microscopic anatomy, cellular compositions, and properties of the respiratory membrane.",
+    "createdAt": "2026-10-24"
+  },
+  {
+    "id": "notebook-grant-kmirrah-exam2",
+    "title": "Lymphoid Organs Anatomy & Immunity Roles NotebookLM (AP-19-N-02-01)",
+    "url": "https://notebook.google.com/notebook/0aa6a93a-b4b7-460e-b3ed-5ef869c738ca",
+    "author": "Grant, Kmirrah",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Lymphatic — Lymphoid Organs & Tissues (AP-19-N-02-01)",
+    "description": "Summarize anatomy and lymphoid roles of lymph nodes, spleen, red bone marrow, and thymus.",
+    "createdAt": "2026-10-24"
+  },
+  {
+    "id": "notebook-grant-kmirrah-exam4",
+    "title": "Urinary System Organs & Blood Filtering Roles NotebookLM (AP-19-R-01-01)",
+    "url": "https://notebook.google.com/notebook/0ee91433-ec56-47d5-8950-3c0906bf447a",
+    "author": "Grant, Kmirrah",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Urinary — Primary Organs & Blood Filtration (AP-19-R-01-01)",
+    "description": "Identify the organs of the urinary system and outline their primary blood-filtering roles.",
+    "createdAt": "2026-10-24"
+  },
+  {
+    "id": "notebook-lerma-stephanie-exam4",
+    "title": "Tubular Active Transport & Osmolarity Dynamics NotebookLM (AP-19-R-08-01)",
+    "url": "https://notebook.google.com/notebook/d8ae9ef6-bc6f-462f-96f1-04be0a71f933",
+    "author": "Lerma, Stephanie",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Urinary — Tubular Active Transport & Osmolarity Dynamics (AP-19-R-08-01)",
+    "description": "Describe active transport and osmolarity changes in PCT, thin/thick limbs of Loop of Henle, and DCT.",
+    "createdAt": "2026-10-24"
+  },
+  {
+    "id": "notebook-lerma-stephanie-exam5",
+    "title": "Ovarian & Uterine Cycle Hormonal Correlation NotebookLM (AP-19-T-02-03)",
+    "url": "https://notebook.google.com/notebook/9257fd9e-d0f6-48e1-8929-91b4e3366888",
+    "author": "Lerma, Stephanie",
+    "role": "student",
+    "examId": "exam5",
+    "topic": "Reproduction — Ovarian & Uterine Cycle Correlation (AP-19-T-02-03)",
+    "description": "Correlate ovarian cycle changes (follicular, luteal) with uterine cycle (menstrual, secretory) under LH/FSH.",
+    "createdAt": "2026-10-24"
+  },
+  {
+    "id": "notebook-dacus-lynli-exam4",
+    "title": "Urinary System Organs & Blood Filtering Roles NotebookLM (AP-19-R-01-01)",
+    "url": "https://notebook.google.com/notebook/55d5a9c1-a687-4529-a8c0-ba4396985f76",
+    "author": "Dacus, Lynli",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Urinary — Primary Organs & Blood Filtration (AP-19-R-01-01)",
+    "description": "Identify the organs of the urinary system and outline their primary blood-filtering roles.",
+    "createdAt": "2026-10-24"
+  },
+  {
+    "id": "notebook-flores-torres-william-exam4",
+    "title": "Arterial Blood Gas Analysis & Acid-Base Compensation NotebookLM (AP-19-S-05-01)",
+    "url": "https://notebook.google.com/notebook/85ef5f5d-d96e-4309-bed7-8a9807a1ec4a",
+    "author": "Flores Torres, William",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Fluid/Acid-Base — Arterial Blood Gas Diagnosis & Compensation (AP-19-S-05-01)",
+    "description": "Diagnose arterial blood gas values to identify respiratory acidosis/alkalosis with metabolic compensation.",
+    "createdAt": "2026-10-24"
   }
 ]
 
