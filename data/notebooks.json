@@ -691,6 +691,28 @@
     "topic": "Digestive — GI Tract Organs & Primary Processes (AP-19-P-01-01)",
     "description": "List organs of the gastrointestinal tract and define ingestion, propulsion, mechanical digestion.",
     "createdAt": "2026-10-25"
+  },
+  {
+    "id": "notebook-regalado-keila-exam4",
+    "title": "Chemical Buffer Systems & Molecular Behavior NotebookLM (AP-19-S-04-02)",
+    "url": "https://notebook.google.com/notebook/5a7c1ab2-1cc7-4f62-a66e-6e5542751cf4",
+    "author": "Regalado, Keila",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Fluid/Acid-Base — Chemical Buffer Systems (AP-19-S-04-02)",
+    "description": "Describe molecular behavior of bicarbonate, phosphate, and protein buffer systems.",
+    "createdAt": "2026-10-27"
+  },
+  {
+    "id": "notebook-regalado-keila-exam5",
+    "title": "Hormonal Control & Stages of Labor NotebookLM (AP-19-T-08-01)",
+    "url": "https://notebook.google.com/notebook/3bb6a370-b77f-4771-a28e-e6706bfae3b2",
+    "author": "Regalado, Keila",
+    "role": "student",
+    "examId": "exam5",
+    "topic": "Development — Hormonal Control of Labor (AP-19-T-08-01)",
+    "description": "Describe hormonal shifts (estrogen/progesterone ratio, oxytocin, prostaglandins) initiating three stages of labor.",
+    "createdAt": "2026-10-27"
   }
 ]
 

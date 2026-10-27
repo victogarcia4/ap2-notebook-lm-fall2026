@@ -478,10 +478,24 @@ export const defaultStudents: Student[] = [
       topic: "Metabolism",
       desc: "Summarize nutritional requirements, classifications, and systemic functions of essential vitamins & minerals."
     },
+    exam4: {
+      id: "AP-19-S-04-02",
+      chap: "20",
+      topic: "Fluid/Acid-Base",
+      desc: "Describe molecular behavior of bicarbonate, phosphate, and protein buffer systems."
+    },
+    exam5: {
+      id: "AP-19-T-08-01",
+      chap: "23",
+      topic: "Development",
+      desc: "Describe hormonal shifts (estrogen/progesterone ratio, oxytocin, prostaglandins) initiating three stages of labor."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/9df95331-507a-4314-a0c3-a3c7ba62eeca",
       exam2: "https://notebook.google.com/notebook/ad80631f-7314-4927-aeef-400bcf429847",
-      exam3: "https://notebook.google.com/notebook/d13817f2-e907-4b63-8a94-b07ff0667075"
+      exam3: "https://notebook.google.com/notebook/d13817f2-e907-4b63-8a94-b07ff0667075",
+      exam4: "https://notebook.google.com/notebook/5a7c1ab2-1cc7-4f62-a66e-6e5542751cf4",
+      exam5: "https://notebook.google.com/notebook/3bb6a370-b77f-4771-a28e-e6706bfae3b2"
     }
   },
   { 
