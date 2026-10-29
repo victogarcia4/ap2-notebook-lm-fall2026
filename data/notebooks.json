@@ -713,6 +713,17 @@
     "topic": "Development — Hormonal Control of Labor (AP-19-T-08-01)",
     "description": "Describe hormonal shifts (estrogen/progesterone ratio, oxytocin, prostaglandins) initiating three stages of labor.",
     "createdAt": "2026-10-27"
+  },
+  {
+    "id": "notebook-flores-torres-william-exam5",
+    "title": "Genetics & Punnett Grid Combinations NotebookLM (AP-19-T-11-02)",
+    "url": "https://notebook.google.com/notebook/3ec6959d-d0bd-41d4-ab0b-ecf156c65e84",
+    "author": "Flores Torres, William",
+    "role": "student",
+    "examId": "exam5",
+    "topic": "Genetics — Cross Combinations & Punnett Grids (AP-19-T-11-02)",
+    "description": "Solve cross combinations of autosomes, sex-linked traits, incomplete dominance, and codominance via Punnett grids.",
+    "createdAt": "2026-10-29"
   }
 ]
 

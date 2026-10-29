@@ -178,11 +178,18 @@ export const defaultStudents: Student[] = [
       topic: "Fluid/Acid-Base",
       desc: "Diagnose arterial blood gas values to identify respiratory acidosis/alkalosis with metabolic compensation."
     },
+    exam5: {
+      id: "AP-19-T-11-02",
+      chap: "24",
+      topic: "Genetics",
+      desc: "Solve cross combinations of autosomes, sex-linked traits, incomplete dominance, and codominance via Punnett grids."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/eed4ceb6-759f-4c69-ba2f-84714681db1c",
       exam2: "https://notebook.google.com/notebook/a713e465-42f3-45e7-a18a-40765351a66a",
       exam3: "https://notebook.google.com/notebook/9590c5d0-b2e8-4a5f-a907-11b7da66ca25",
-      exam4: "https://notebook.google.com/notebook/85ef5f5d-d96e-4309-bed7-8a9807a1ec4a"
+      exam4: "https://notebook.google.com/notebook/85ef5f5d-d96e-4309-bed7-8a9807a1ec4a",
+      exam5: "https://notebook.google.com/notebook/3ec6959d-d0bd-41d4-ab0b-ecf156c65e84"
     }
   },
   { 
