@@ -410,10 +410,17 @@ export const defaultStudents: Student[] = [
       topic: "Metabolism",
       desc: "Contrast systemic hormone distributions during absorptive (insulin) vs post-absorptive (glucagon) states."
     },
+    exam4: {
+      id: "AP-19-S-02-01",
+      chap: "20",
+      topic: "Fluid/Acid-Base",
+      desc: "Summarize thirst triggers (hypothalamic osmoreceptors, blood pressure drop) and systemic ADH output."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/5d0c22fa-3985-4a8c-8e7c-ac74656ddfab",
       exam2: "https://notebook.google.com/notebook/018357de-acdd-4f99-94e4-62504bb5803f",
-      exam3: "https://notebook.google.com/notebook/77107667-6acc-4279-b101-bf3abc6ad3e3"
+      exam3: "https://notebook.google.com/notebook/77107667-6acc-4279-b101-bf3abc6ad3e3",
+      exam4: "https://notebook.google.com/notebook/85a7167e-3834-4db5-a1a1-0f242782d743"
     },
     gameLinks: {
       exam5: {

@@ -735,6 +735,17 @@
     "topic": "Reproduction — Male Reproductive Anatomy & Accessory Glands (AP-19-T-01-01)",
     "description": "Describe anatomical relationships of testes, epididymis, vas deferens, and accessory semen glands.",
     "createdAt": "2026-10-29"
+  },
+  {
+    "id": "notebook-orosco-jose-exam4",
+    "title": "Thirst Triggers, Osmoreceptors & ADH Output NotebookLM (AP-19-S-02-01)",
+    "url": "https://notebook.google.com/notebook/85a7167e-3834-4db5-a1a1-0f242782d743",
+    "author": "Orosco, Jose",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Fluid/Acid-Base — Thirst Triggers & ADH Output (AP-19-S-02-01)",
+    "description": "Summarize thirst triggers (hypothalamic osmoreceptors, blood pressure drop) and systemic ADH output.",
+    "createdAt": "2026-11-01"
   }
 ]
 
