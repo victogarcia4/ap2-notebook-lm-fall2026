@@ -140,10 +140,17 @@ export const defaultStudents: Student[] = [
       topic: "Metabolism",
       desc: "Describe hypothalamic set-points, shivering, vasodilation, and core thermal feedback."
     },
+    exam4: {
+      id: "AP-19-S-04-02",
+      chap: "20",
+      topic: "Fluid/Acid-Base",
+      desc: "Describe molecular behavior of bicarbonate, phosphate, and protein buffer systems."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/93f3d840-015f-43a0-b874-903f109e95d8",
       exam2: "https://notebook.google.com/notebook/45cb6425-2192-4761-9707-1b846e0386d4",
-      exam3: "https://notebook.google.com/notebook/1789c188-eb88-4385-b978-a97081a8c86b"
+      exam3: "https://notebook.google.com/notebook/1789c188-eb88-4385-b978-a97081a8c86b",
+      exam4: "https://notebook.google.com/notebook/12056c8b-5c97-4a3c-877c-eaadae907c28"
     }
   },
   { id: "7768690", name: "Flores, Jaqueline", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },
@@ -283,10 +290,17 @@ export const defaultStudents: Student[] = [
       topic: "Digestive",
       desc: "Trace chemical breakdown and standard symport/facilitated absorption of carbohydrates and proteins."
     },
+    exam4: {
+      id: "AP-19-R-07-01",
+      chap: "21",
+      topic: "Urinary",
+      desc: "Analyze structural layers of the filtration membrane and local pressures establishing net GFR."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/a27e856b-8195-4430-8273-34820328b2f7",
       exam2: "https://notebook.google.com/notebook/135702db-b081-47a1-9819-2b83b0c8203d",
-      exam3: "https://notebook.google.com/notebook/feb4241f-b326-4554-80ae-8a9cf8d52587"
+      exam3: "https://notebook.google.com/notebook/feb4241f-b326-4554-80ae-8a9cf8d52587",
+      exam4: "https://notebook.google.com/notebook/25dcd47c-ddb5-4a75-aad1-7404bf56cdc5"
     }
   },
   { 
@@ -367,14 +381,40 @@ export const defaultStudents: Student[] = [
       topic: "Respiratory",
       desc: "Examine microscopic anatomy, cellular compositions, and properties of the respiratory membrane."
     },
+    exam3: {
+      id: "AP-19-Q-02-01",
+      chap: "18",
+      topic: "Metabolism",
+      desc: "Detail net yields, cellular locations, and mechanisms of Glycolysis, Citric Acid Cycle, and ETC."
+    },
+    exam4: {
+      id: "AP-19-R-12-01",
+      chap: "21",
+      topic: "Urinary",
+      desc: "Detail mechanical steps and autonomic pathways of the micturition reflex."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/3953916c-8f1f-4bfa-a140-4afbeb9e0b36",
-      exam2: "https://notebook.google.com/notebook/5d0d1c2f-4ed6-44a2-a4c9-d9d143387f36"
+      exam2: "https://notebook.google.com/notebook/5d0d1c2f-4ed6-44a2-a4c9-d9d143387f36",
+      exam3: "https://notebook.google.com/notebook/701c2335-36ae-4a80-8dac-d7426931e69f",
+      exam4: "https://notebook.google.com/notebook/b4b841b3-95a6-4261-afb7-463044515de1"
     },
     gameLinks: {
       exam1: {
         title: "Rhythm Rescue: Code Crimson",
         url: "https://heart-rhythm-rangers.lovable.app/"
+      },
+      exam2: {
+        title: "Alveoli & Roses: Respiratory Membrane Quest",
+        url: "https://alveoli-and-roses.lovable.app/"
+      },
+      exam3: {
+        title: "Metabolism Mystery Quest",
+        url: "https://metabolism-mystery-quest.lovable.app/"
+      },
+      exam4: {
+        title: "Bladder Reflex Bloom Quest",
+        url: "https://bladder-reflex-bloom-quest.lovable.app/"
       }
     },
     extraCredit: {
@@ -544,10 +584,17 @@ export const defaultStudents: Student[] = [
       topic: "Digestive",
       desc: "List organs of the gastrointestinal tract and define ingestion, propulsion, mechanical digestion."
     },
+    exam4: {
+      id: "AP-19-S-04-03",
+      chap: "20",
+      topic: "Fluid/Acid-Base",
+      desc: "Contrast speed and efficiency of respiratory compensation vs renal excretion of acid load."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/31d97b16-fb41-48af-91e4-102423fda3d3",
       exam2: "https://notebook.google.com/notebook/957e458b-fde2-4b50-bc2c-f3e0901b12d0?authuser=1",
-      exam3: "https://notebook.google.com/notebook/aabcc280-056f-47ac-b1db-c7c9a0d59458?authuser=1"
+      exam3: "https://notebook.google.com/notebook/aabcc280-056f-47ac-b1db-c7c9a0d59458?authuser=1",
+      exam4: "https://notebook.google.com/notebook/b4b841b3-95a6-4261-afb7-463044515de1"
     }
   },
   { id: "7917578", name: "Seda Sepulveda, Isaias", gradeBasis: "Graded", units: "4.00", plan: "Associate Degree - Associate of Science (AS)", level: "Freshman" },

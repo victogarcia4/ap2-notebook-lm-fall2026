@@ -746,6 +746,62 @@
     "topic": "Fluid/Acid-Base — Thirst Triggers & ADH Output (AP-19-S-02-01)",
     "description": "Summarize thirst triggers (hypothalamic osmoreceptors, blood pressure drop) and systemic ADH output.",
     "createdAt": "2026-11-01"
+  },
+  {
+    "id": "notebook-mcgruder-chelsea-exam3",
+    "title": "Metabolism: Glycolysis, Citric Acid Cycle & ETC NotebookLM (AP-19-Q-02-01)",
+    "url": "https://notebook.google.com/notebook/701c2335-36ae-4a80-8dac-d7426931e69f",
+    "author": "Mcgruder, Chelsea",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Metabolism — Cellular Respiration & ATP Yields (AP-19-Q-02-01)",
+    "description": "Detail net yields, cellular locations, and mechanisms of Glycolysis, Citric Acid Cycle, and ETC.",
+    "createdAt": "2026-11-06"
+  },
+  {
+    "id": "notebook-mcgruder-chelsea-exam4",
+    "title": "Micturition Reflex & Autonomic Pathways NotebookLM (AP-19-R-12-01)",
+    "url": "https://notebook.google.com/notebook/b4b841b3-95a6-4261-afb7-463044515de1",
+    "author": "Mcgruder, Chelsea",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Urinary — Micturition Reflex & Autonomic Pathways (AP-19-R-12-01)",
+    "description": "Detail mechanical steps and autonomic pathways of the micturition reflex.",
+    "createdAt": "2026-11-06"
+  },
+  {
+    "id": "notebook-escamilla-desteny-exam4",
+    "title": "Chemical Buffer Systems: Bicarbonate, Phosphate & Protein NotebookLM (AP-19-S-04-02)",
+    "url": "https://notebook.google.com/notebook/12056c8b-5c97-4a3c-877c-eaadae907c28",
+    "author": "Escamilla, Desteny",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Fluid/Acid-Base — Chemical Buffer Systems (AP-19-S-04-02)",
+    "description": "Describe molecular behavior of bicarbonate, phosphate, and protein buffer systems.",
+    "createdAt": "2026-11-06"
+  },
+  {
+    "id": "notebook-ledesma-debora-exam4",
+    "title": "Filtration Membrane & Net GFR Pressures NotebookLM (AP-19-R-07-01)",
+    "url": "https://notebook.google.com/notebook/25dcd47c-ddb5-4a75-aad1-7404bf56cdc5",
+    "author": "Ledesma, Debora",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Urinary — Filtration Membrane & Net GFR (AP-19-R-07-01)",
+    "description": "Analyze structural layers of the filtration membrane and local pressures establishing net GFR.",
+    "createdAt": "2026-11-06"
+  },
+  {
+    "id": "notebook-sallam-noor-exam4",
+    "title": "Respiratory vs Renal Acid-Base Compensation Speed NotebookLM (AP-19-S-04-03)",
+    "url": "https://notebook.google.com/notebook/b4b841b3-95a6-4261-afb7-463044515de1",
+    "author": "Sallam, Noor",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Fluid/Acid-Base — Respiratory vs Renal Compensation (AP-19-S-04-03)",
+    "description": "Contrast speed and efficiency of respiratory compensation vs renal excretion of acid load.",
+    "createdAt": "2026-11-06"
   }
 ]
+
 

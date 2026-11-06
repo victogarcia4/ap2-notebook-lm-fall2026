@@ -31,6 +31,40 @@
     "topic": "Fluid/Acid-Base — Osmosis Rx, IV Fluid Tonicity & Clinical Fluid Management (Extra Credit)",
     "description": "Extra Credit Interactive AI Game: Clinical fluid therapy simulation challenging learners to manage IV fluid tonicity, osmotic shifts across ICF/ECF, and cellular volume equilibrium.",
     "createdAt": "2026-10-02"
+  },
+  {
+    "id": "game-mcgruder-chelsea-alveoli-and-roses",
+    "title": "Alveoli & Roses: Respiratory Membrane Quest",
+    "url": "https://alveoli-and-roses.lovable.app/",
+    "author": "Mcgruder, Chelsea",
+    "role": "student",
+    "examId": "exam2",
+    "topic": "Respiratory — Microscopic Anatomy & Respiratory Membrane Quest (Extra Credit)",
+    "description": "Extra Credit Interactive AI Game: Respiratory gas exchange adventure built on Lovable exploring alveoli microstructure, surfactant, and blood-air diffusion barriers.",
+    "createdAt": "2026-11-06"
+  },
+  {
+    "id": "game-mcgruder-chelsea-metabolism-mystery",
+    "title": "Metabolism Mystery Quest",
+    "url": "https://metabolism-mystery-quest.lovable.app/",
+    "author": "Mcgruder, Chelsea",
+    "role": "student",
+    "examId": "exam3",
+    "topic": "Metabolism — Cellular Respiration & ATP Pathways Mystery Quest (Extra Credit)",
+    "description": "Extra Credit Interactive AI Game: Biochemical mystery quest built on Lovable deciphering glycolysis, Krebs cycle, and electron transport chain yields.",
+    "createdAt": "2026-11-06"
+  },
+  {
+    "id": "game-mcgruder-chelsea-bladder-reflex-bloom",
+    "title": "Bladder Reflex Bloom Quest",
+    "url": "https://bladder-reflex-bloom-quest.lovable.app/",
+    "author": "Mcgruder, Chelsea",
+    "role": "student",
+    "examId": "exam4",
+    "topic": "Urinary — Micturition Reflex & Autonomic Pathways Bloom Quest (Extra Credit)",
+    "description": "Extra Credit Interactive AI Game: Interactive urinary tract bloom quest built on Lovable mastering detrusor innervation, internal/external sphincter mechanics, and pontine control.",
+    "createdAt": "2026-11-06"
   }
 ]
+
 
