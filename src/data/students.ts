@@ -303,11 +303,18 @@ export const defaultStudents: Student[] = [
       topic: "Urinary",
       desc: "Analyze structural layers of the filtration membrane and local pressures establishing net GFR."
     },
+    exam5: {
+      id: "AP-19-T-02-02",
+      chap: "22",
+      topic: "Reproduction",
+      desc: "Trace follicle development, steps of oogenesis, and contrast meiosis halts in oocytes vs spermatids."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/a27e856b-8195-4430-8273-34820328b2f7",
       exam2: "https://notebook.google.com/notebook/135702db-b081-47a1-9819-2b83b0c8203d",
       exam3: "https://notebook.google.com/notebook/feb4241f-b326-4554-80ae-8a9cf8d52587",
-      exam4: "https://notebook.google.com/notebook/25dcd47c-ddb5-4a75-aad1-7404bf56cdc5"
+      exam4: "https://notebook.google.com/notebook/25dcd47c-ddb5-4a75-aad1-7404bf56cdc5",
+      exam5: "https://notebook.google.com/notebook/acc9b7d4-f7e1-4bcd-ab28-db74c2a55248"
     }
   },
   { 
@@ -463,11 +470,18 @@ export const defaultStudents: Student[] = [
       topic: "Fluid/Acid-Base",
       desc: "Summarize thirst triggers (hypothalamic osmoreceptors, blood pressure drop) and systemic ADH output."
     },
+    exam5: {
+      id: "AP-19-T-04-01",
+      chap: "23",
+      topic: "Development",
+      desc: "Detail fertilization steps: acrosomal reaction, plasma fusion, fast and slow blocks to polyspermy."
+    },
     notebookLinks: {
       exam1: "https://notebook.google.com/notebook/5d0c22fa-3985-4a8c-8e7c-ac74656ddfab",
       exam2: "https://notebook.google.com/notebook/018357de-acdd-4f99-94e4-62504bb5803f",
       exam3: "https://notebook.google.com/notebook/77107667-6acc-4279-b101-bf3abc6ad3e3",
-      exam4: "https://notebook.google.com/notebook/85a7167e-3834-4db5-a1a1-0f242782d743"
+      exam4: "https://notebook.google.com/notebook/85a7167e-3834-4db5-a1a1-0f242782d743",
+      exam5: "https://notebook.google.com/notebook/90cb5d81-f140-4888-9759-d85a562c81c9"
     },
     gameLinks: {
       exam5: {
